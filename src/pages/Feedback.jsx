@@ -1,21 +1,69 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { supabase } from '../client'
+
 
 const Feedback = ({token}) => {
     const [text, setText] = useState("")
     const [ratings, setRatings] = useState([]);
+    const [department, setDepartment] = useState("Computer Science and Engineering");
+    const depid = 1
+    {/*
+        send departmentid (depid) as a prop
+
+    */}
+    useEffect(()=>{
+        async function fetchData() {
+            try {
+              // Replace 'your_table' with the name of your table and 'id_column' with the actual column name for the ID
+              const { data, error } = await supabase
+                .from('Departments')
+                .select('Department')
+                .filter('id', 'eq', depid)      
+      
+              if (error) {
+                throw error;
+              }
+              console.log(data)
+              setDepartment(data[0].Department);
+            } catch (error) {
+              console.error('Error fetching data:', error.message);
+            }
+        }
+        fetchData()
+    },[])
+    
     const questions = [
         'On a scale of 1 to 5, how would you rate your overall experience at the stall?',
         'On a scale of 1 to 5, how would you rate your overall experience at the stall?',
         'On a scale of 1 to 5, how would you rate your overall experience at the stall?'
     ]
     const radioOptions = [1,2,3,4,5]
-    function handleSubmit(e){
+   
+    async function handleSubmit(e){
         e.preventDefault()
         const data = {
+            id:Math.floor(Math.random()*10000),
+            depid:depid,
+            userid:token.user.user_metadata.full_name,
             ratings:ratings,
             feedback:text
         }
-        console.log(data)
+        try {
+            // Replace 'your_table' with the name of your table
+            const { res, error } = await supabase
+              .from('Feedbacks')
+              .insert([data]);
+      
+            if (error) {
+              throw error;
+            }
+      
+            console.log('Data inserted:', res);
+            
+          } catch (error) {
+            console.error('Error inserting data:', error.message);
+          }
+        //console.log(data)
         return 'hi'
     }
     function handleRatingChange(index,rating){
@@ -31,7 +79,7 @@ const Feedback = ({token}) => {
         <div className="grid place-content-baseline">
             <div className="mb-16">
                 <p className="text-center mt-20 p-0 h-8 text-5xl font-extrabold text-white">Feedback</p>
-                <p className="text-center mt-4 p-0 h-8 text-3xl font-light text-[#8acafa]">Mechanical Engineering</p>
+                <p className="text-center mt-4 p-0 h-8 text-3xl font-light text-[#8acafa]">{department}</p>
             </div>
             <form className="px-8 " onSubmit={handleSubmit}>
                 <div className="flex flex-col justify-center">
