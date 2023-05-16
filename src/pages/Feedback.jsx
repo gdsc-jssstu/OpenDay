@@ -2,11 +2,11 @@ import { useState, useEffect } from "react"
 import { supabase } from '../client'
 
 
-const Feedback = ({token}) => {
+const Feedback = ({token, depid}) => {
     const [text, setText] = useState("")
     const [ratings, setRatings] = useState([]);
     const [department, setDepartment] = useState("Computer Science and Engineering");
-    const depid = 1
+    //const depid = 1
     {/*
         send departmentid (depid) as a prop
 
