@@ -1,16 +1,20 @@
 import { useState } from 'react';
 import { Link, useNavigate} from 'react-router-dom';
 import { supabase } from '../client';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
+import AuthIcon from "../assets/AuthIcon.svg"
+
+import "../assets/css/auth.css"
 
 const Login = ({setToken}) => {
   let navigate = useNavigate()
-
+  const alertDiv = document.getElementById('invalid')
   const [formData,setFormData] = useState({
         email:'',password:''
   })
 
-  console.log(formData)
 
   function handleChange(event){
     setFormData((prevFormData)=>{
@@ -33,7 +37,6 @@ const Login = ({setToken}) => {
           })
 
       if (error) throw error
-      console.log(data)
       setToken(data)
       navigate('/homepage')
 
@@ -42,7 +45,8 @@ const Login = ({setToken}) => {
 
       
     } catch (error) {
-      alert(error)
+
+      alert(error);
     }
   }
 
@@ -50,30 +54,33 @@ const Login = ({setToken}) => {
 
 
   return (
-    <div >
+    <div className='login-main' >
+        <img src={AuthIcon} alt="authIcon" className='authIcon' />
+        <div className="info">
+          <h3>OPEN DAY'23</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adispicing elit</p>
+        </div>
       <form onSubmit={handleSubmit}>
-        
-
         <input 
           placeholder='Email'
           name='email'
           onChange={handleChange}
         />
-
+        <br />
         <input 
           placeholder='Password'
           name='password'
           type="password"
           onChange={handleChange}
         />
-
+        <br />
         <button type='submit'>
-          Submit
+          Sign In
         </button>
-
+        <br />
 
       </form>
-      <p>
+      <p className='sign-up-link'>
       Dont have an account? <Link to='/signup'>Sign Up</Link> 
       </p>
       
