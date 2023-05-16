@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../client';
 
-
+import AuthIcon from "../assets/AuthIcon.svg"
+import "../assets/css/auth.css"
 
 const SignUp = () => {
 
@@ -52,7 +53,12 @@ const SignUp = () => {
 
 
   return (
-    <div>
+    <div className='login-main'>
+      <img src={AuthIcon} alt="authIcon" className='authIcon' />
+        <div className="info">
+          <h3>OPEN DAY'23</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adispicing elit</p>
+        </div>
       <form onSubmit={handleSubmit}>
         <input 
           placeholder='Fullname'
@@ -80,12 +86,14 @@ const SignUp = () => {
         />
 
         <button type='submit'>
-          Submit
+          Sign Up
         </button>
 
 
       </form>
-      Already have an account?<Link to='/'>Login</Link> 
+      <p className='sign-up-link'>
+      Already have an account!<Link to='/'>Sign In</Link> 
+      </p>
     </div>
   )
 }
