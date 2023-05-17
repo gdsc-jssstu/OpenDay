@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react"
 import { supabase } from '../client'
+import { Navigate, useLocation, useNavigate } from "react-router-dom"
 
 
-const Feedback = ({token, depid}) => {
+const Feedback = () => {
     const [text, setText] = useState("")
     const [ratings, setRatings] = useState([]);
     const [department, setDepartment] = useState("Computer Science and Engineering");
+    const location = useLocation()
+    const {depid, token} = location.state
+    const navigate = useNavigate();
     //const depid = 1
     {/*
         send departmentid (depid) as a prop
@@ -64,6 +68,7 @@ const Feedback = ({token, depid}) => {
             console.error('Error inserting data:', error.message);
           }
         //console.log(data)
+        navigate('/homepage')
         return 'hi'
     }
     function handleRatingChange(index,rating){
