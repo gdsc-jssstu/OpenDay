@@ -38,7 +38,8 @@ const Homepage = ({token}) => {
       <p>Mobile :- {token.user.user_metadata.mobile}</p>
       {
         deps?.map((dep,i)=>
-          <Link to = '/feedback' state={{depid:dep.id, token:token}} style={{color:'black'}}key={i}>{dep.id+" "+dep.Department}</Link>
+        //This is for testing purpose only, change the link url to department specific page and from there do the below inorder to go to feedbackpage
+          <Link to = '/feedback' state={{depid:dep.id, token:token}} style={{color:'black', display:'block'}}key={i}>{dep.Department}</Link>
         )
       }
 
