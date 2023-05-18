@@ -25,17 +25,8 @@ const App = () => {
         <Route path={"/signup"} element={<SignUp />} />
         <Route path={"/"} element={<Login setToken={setToken} />} />
         <Route path={"/dept/:name"} element={<DepartmentDetails />} />
-
-        {!token ? (
-          <Route path={"/homepage"} element={<Homepage token={token} />} />
-        ) : (
-          ""
-        )}
-        {token ? (
-          <Route path={"/feedback"} element={<Feedback token={token} />} />
-        ) : (
-          ""
-        )}
+        <Route path={"/homepage"} element={<Homepage token={token} />} />
+        <Route path={"/feedback"} element={<Feedback token={token} />} />
       </Routes>
     </div>
   );
