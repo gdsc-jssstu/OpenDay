@@ -4,9 +4,6 @@ import DeptData from "../assets/deptData/DeptData";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-
 const DepartmentDetails = () => {
   const { name } = useParams();
 
@@ -14,11 +11,10 @@ const DepartmentDetails = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!DeptData.hasOwnProperty(name)) {
+    if (!DeptData.hasOwnProperty(name.toUpperCase())) {
       setError("Invalid Url");
     } else {
-      setData(DeptData[name]);
-      console.log(data);
+      setData(DeptData[name.toUpperCase()]);
     }
   }, []);
 
@@ -50,6 +46,7 @@ const DepartmentDetails = () => {
           isList={true}
         />
 
+        {/* TODO: What does this from do? */}
         <form className="flex flex-col  py-6 items-center text-lg font-semibold ">
           <div className="flex justify-around items-center  py-6 tems-center text-lg font-semibold  w-96">
             <p className=" text-white text-lg">Enter Dept Code</p>
@@ -66,6 +63,7 @@ const DepartmentDetails = () => {
         </form>
       </div>
 
+      {/* TODO: Get next dept link from current dept data */}
       <div className="flex divide-x-2 divide-primary/30 bg-primary/50">
         <a href="#" className="flex-1 py-6 text-center text-lg font-semibold ">
           Previous Venu
