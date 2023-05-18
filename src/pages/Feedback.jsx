@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react"
 import { supabase } from '../client'
+import { useLocation, useNavigate } from "react-router-dom"
 
 
-const Feedback = ({token, depid}) => {
+const Feedback = () => {
     const [text, setText] = useState("")
     const [ratings, setRatings] = useState([]);
     const [department, setDepartment] = useState("Computer Science and Engineering");
+    const location = useLocation()
+    const {depid, token} = location.state
+    const navigate = useNavigate();
     //const depid = 1
     {/*
         send departmentid (depid) as a prop
@@ -64,6 +68,7 @@ const Feedback = ({token, depid}) => {
             console.error('Error inserting data:', error.message);
           }
         //console.log(data)
+        navigate('/homepage')
         return 'hi'
     }
     function handleRatingChange(index,rating){
@@ -76,16 +81,16 @@ const Feedback = ({token, depid}) => {
     }
   return (
     <div className="flex items-stretch bg-[#158EB4] min-h-screen">
-        <div className="grid place-content-baseline">
+        <div className="grid place-content-center">
             <div className="mb-16">
                 <p className="text-center mt-20 p-0 h-8 text-5xl font-extrabold text-white">Feedback</p>
-                <p className="text-center mt-4 p-0 h-8 text-3xl font-light text-[#8acafa]">{department}</p>
+                <p className="text-center mt-8 p-0 h-8 text-3xl font-light text-[#8acafa]">{department}</p>
             </div>
-            <form className="px-8 " onSubmit={handleSubmit}>
+            <form className="px-8 flex flex-col justify-center text-justify" onSubmit={handleSubmit}>
                 <div className="flex flex-col justify-center">
                 {questions.map((question,i)=>
-                    <div className="grid" key={i}>
-                        <p className="text-left text-lg">{question}</p>
+                    <div className="grid place-content-center" key={i}>
+                        <p className="text-justify text-lg">{question}</p>
                         <div className="flex justify-between p-4">
                             {radioOptions.map(option => 
                                 <div className="flex items-center mr-4" key={option}>
