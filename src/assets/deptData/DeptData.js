@@ -5,9 +5,10 @@
  */
 
 import MechDeptData from "./MechanicalEngineering";
-
+import CseDeptData from "./ComputerScienceAndEngineering";
 const DeptData = {
   ME: MechDeptData,
+  CSE: CseDeptData,
 };
 
 export default DeptData;
