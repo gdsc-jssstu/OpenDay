@@ -42,7 +42,7 @@ const Homepage = ({ token }) => {
       {deps?.map((dep, i) => (
         //This is for testing purpose only, change the link url to department specific page and from there do the below inorder to go to feedbackpage
         <Link
-          to="/feedback"
+          to={`/dept/${dep.details_path}`}
           state={{ depid: dep.id, token: token }}
           style={{ color: "black", display: "block" }}
           key={i}
