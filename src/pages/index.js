@@ -1,9 +1,8 @@
-import Login from './Login'
-import SignUp from './SignUp'
-import Homepage from './Homepage'
+import DeptDetails from "./DeptDetails";
+import Feedback from "./Feedback";
+import Homepage from "./Homepage";
+import Login from "./Login";
+import RouteMap from "./RouteMap";
+import SignUp from "./SignUp";
 
-
-
-export {
-    Login, SignUp, Homepage
-}
+export { DeptDetails, Feedback, Homepage, Login, RouteMap, SignUp };
