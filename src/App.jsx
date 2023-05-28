@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { SignUp, Login, Homepage } from "./pages";
+import {
+  SignUp,
+  Login,
+  Homepage,
+  Feedback,
+  DeptDetails,
+  RouteMap,
+} from "./pages";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Feedback from "./pages/Feedback";
