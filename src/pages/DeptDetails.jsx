@@ -4,7 +4,7 @@ import DeptData from "../assets/deptData/DeptData";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const DepartmentDetails = () => {
+const DeptDetails = () => {
   const { name } = useParams();
 
   const [data, setData] = useState(null);
@@ -76,4 +76,4 @@ const DepartmentDetails = () => {
   );
 };
 
-export default DepartmentDetails;
+export default DeptDetails;
