@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { supabase } from '../client';
 
 import AuthIcon from "../assets/AuthIcon.svg"
 import "../assets/css/auth.css"
 
-const SignUp = () => {
+const SignUp = ({setToken}) => {
+
+  let navigate = useNavigate()
 
   const [formData,setFormData] = useState({
     fullName:'',email:'',password:'',mobile:''
@@ -41,7 +43,10 @@ const SignUp = () => {
         }
       )
       if (error) throw error
-      alert('Check your email for verification link')
+      else{
+        setToken(data);
+        navigate('/homepage')
+      }
 
       
     } catch (error) {
