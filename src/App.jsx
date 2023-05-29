@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path={"/signup"} element={<SignUp />} />
+        <Route path={"/signup"} element={<SignUp setToken={setToken}/>} />
         <Route path={"/"} element={<Login setToken={setToken} />} />
         <Route path={"/dept/:name"} element={<DepartmentDetails />} />
         <Route path={"/routemap"} element={<RouteMap />} />
