@@ -72,7 +72,7 @@ const Feedback = () => {
       console.error("Error inserting data:", error.message);
     }
     //console.log(data)
-    navigate("/homepage");
+    navigate("/routemap");
     return "hi";
   }
   function handleRatingChange(index, rating) {
