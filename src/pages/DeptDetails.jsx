@@ -57,9 +57,7 @@ const DeptDetails = () => {
               className="p-3 w-40 rounded-lg outline-0"
             />
           </div>
-          <button className="m-4 p-4 rounded-2xl shadow-2xl bg-secondary w-min text-lg font-semibold">
-            Feedback
-          </button>
+          
         </form>
       </div>
 

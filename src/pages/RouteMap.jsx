@@ -1,6 +1,7 @@
 import icon from "/img/running.svg";
 import { MapData } from "../assets/deptData/RouteMap";
 import RouteComp from "../components/RouteComp";
+import { Link } from "react-router-dom";
 
 export default function RouteMap() {
   return (
@@ -27,7 +28,11 @@ export default function RouteMap() {
           <div className="flex align-center justify-between">
             <div>End!</div>
           </div>
+          
         </div>
+        <button className="m-4 p-4 rounded-2xl shadow-2xl bg-secondary w-min text-lg font-semibold">
+            <Link to='/feedback'>Feedback</Link>
+        </button>
       </div>
     </div>
   );
