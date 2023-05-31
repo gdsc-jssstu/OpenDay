@@ -87,3 +87,16 @@ export const MapData = [
     details_route: "/dept/me",
   },
 ];
+
+export const trialmap=[  {
+  name: "Dept of Electronics and Instrumentation",
+  image: "/img/dept/RouteMap/step.svg",
+  details_route: "/dept/me",
+  details_route: "/dept/me",
+},
+{
+  name: "Dept of MCA",
+  image: "/img/dept/RouteMap/mca.svg",
+  details_route: "/dept/me",
+},
+];
