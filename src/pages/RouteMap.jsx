@@ -24,15 +24,14 @@ export default function RouteMap() {
             />
           ))}
         </div>
+
         <div className="py-2 px-8 bg-white rounded-md font-bold my-3">
           <div className="flex align-center justify-between">
             <div>End!</div>
           </div>
           
         </div>
-        <button className="m-4 p-4 rounded-2xl shadow-2xl bg-secondary w-min text-lg font-semibold">
-            <Link to='/feedback'>Feedback</Link>
-        </button>
+        
       </div>
     </div>
   );

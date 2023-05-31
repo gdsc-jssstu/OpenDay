@@ -3,23 +3,23 @@ const CseDeptData = {
   name: "Department of Computer Science and Engineering",
   aboutUs: {
     content:
-      "The Computer Science and Engineering Department is one of the oldest and largest departments at our university. We are committed to providing our students with a world-class education that will  prepare them for successful careers in the field of mechanical engineering.",
+      "The inception of the Department of Computer Science and Engineering (CS&E) was one among the first to be established in the State of Karnataka in the year 1982. Our mission is to create ideas that deepen and advance our understanding of the realm of Computer Science and Engineering and with those ideas to develop innovative, principled, and insightful leaders who changed the world.",
   },
   achievements: {
     content: [
-      "The department was established in 1900.",
-      "The department has produced over 10,000 graduates.",
-      "The department has won numerous awards, including the ABET Engineering Accreditation Commission's highest recognition, the ETAC Engineering Program of the Year Award.",
-      "The department's faculty and students have made significant contributions to the field of mechanical engineering, including the development of new technologies and the advancement of engineering education.",
+      "Faculty research collaboration with the international university – Deakin University, Australia, Duy Tan University, Vietnam.",
+      "6 Global Initiative of Academic Networks (GIAN) programs sponsored by Dept. of Education, Govt. of India are conducted. Eminent professors from prestigious",
+      "Consistent more than 95% placement record in reputed companies, with the highest package of 40 lakhs.",
+      "Average 20 research papers published annually in peer-reviewed journals by Faculty and Students.",
     ],
   },
   projects: {
     imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
     content: [
-      "The department was established in 1900.",
-      "The department has produced over 10,000 graduates.",
-      "The department has won numerous awards, including the ABET Engineering Accreditation Commission's highest recognition, the ETAC Engineering Program of the Year Award.",
-      "The department's faculty and students have made significant contributions to the field of mechanical engineering, including the development of new technologies and the advancement of engineering education.",
+      "Smart energy consumption monitoring meter - Prof. Anil Kumar K M",
+      "A Novel Soft X-Ray Image Benchmark Dataset for Automatic, Non-destructive Internal Quality Detection of Mango Fruits - Vani Ashok",
+      "A SYSTEM MONITORING FOR HARVESTING OF FARMING USING DRONE TECHNOLOGY - Parashiva Murthy B M",
+      "System and Method of creating hand gesture Benchmark images data sets for recognizing and interpreting American sign language - Dr. Srinath S",
     ],
   },
 };

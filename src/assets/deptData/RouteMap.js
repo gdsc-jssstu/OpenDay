@@ -2,17 +2,17 @@ export const MapData = [
   {
     name: "Ganesha Temple",
     image: "/img/dept/RouteMap/temple.svg",
-    details_route: "/dept/me",
+    details_route: "/routemap",
   },
   {
     name: "Dept of Electrical and Electronics",
     image: "/img/dept/RouteMap/eee.svg",
-    details_route: "/dept/me",
+    details_route: "/dept/eee",
   },
   {
     name: "Dept of Electronics and Communication",
     image: "/img/dept/RouteMap/ece.svg",
-    details_route: "/dept/me",
+    details_route: "/dept/ece",
   },
   {
     name: "Dept of Mechanical Engineering",
@@ -20,29 +20,54 @@ export const MapData = [
     details_route: "/dept/me",
   },
   {
+    name:"Dept of Physics",
+    image:"/img/dept/RouteMap/physics.png",
+    details_route:"/dept/phy"
+  },
+  {
     name: "Dept of Chemistry",
     image: "/img/dept/RouteMap/chem.svg",
-    details_route: "/dept/me",
+    details_route: "/dept/che",
   },
   {
     name: "Dept of Mathematics",
     image: "/img/dept/RouteMap/math.svg",
-    details_route: "/dept/me",
+    details_route: "/dept/mat",
   },
   {
     name: "Dept of Biotechnology",
     image: "/img/dept/RouteMap/bt.svg",
-    details_route: "/dept/me",
+    details_route: "/dept/biotech",
   },
   {
     name: "Dept of Construction Technology and Management",
     image: "/img/dept/RouteMap/ctm.svg",
-    details_route: "/dept/me",
+    details_route: "/dept/ctm",
   },
   {
     name: "Dept of Civil Engineering",
     image: "/img/dept/RouteMap/civil.svg",
-    details_route: "/dept/me",
+    details_route: "/dept/civil",
+  },
+  {
+    name:"Dept of Environmental Engineering",
+    image:"/img/dept/RouteMap/civil.svg",
+    details_route:"/dept/env"
+  },
+  {
+    name:"Dept of Industrial and Production Engineering",
+    image:"/img/dept/RouteMap/civil.svg",
+    details_route:"/dept/ipe"
+  },
+  {
+    name:"Dept of Polymer Science and Technology",
+    image:"/img/dept/RouteMap/civil.svg",
+    details_route:"/dept/pst"
+  },
+  {
+    name: "UNIVED",
+    image: "/img/dept/RouteMap/unived.svg",
+    details_route: "/dept/unived",
   },
   {
     name: "Dept of Computer Science",
@@ -50,25 +75,30 @@ export const MapData = [
     details_route: "/dept/cse",
   },
   {
-    name: "Dept of MBA",
-    image: "/img/dept/RouteMap/mba.svg",
-    details_route: "/dept/me",
-  },
-  {
-    name: "Dept of PT",
-    image: "/img/dept/RouteMap/pt.svg",
-    details_route: "/dept/me",
-  },
-  {
-    name: "UNIVED",
-    image: "/img/dept/RouteMap/unived.svg",
-    details_route: "/dept/me",
+    name: "Dept of Information Science",
+    image: "/img/dept/RouteMap/is.svg",
+    details_route: "/dept/ise",
   },
 
   {
-    name: "Dept of Information Science",
-    image: "/img/dept/RouteMap/is.svg",
+    name:"Computer Science and Business System",
+    image:"/img/dept/RouteMap/csbs.png",
+    details_route:"/dept/csbs"
+  },
+  {
+    name: "Dept of Electronics and Instrumentation",
+    image: "/img/dept/RouteMap/civil.svg",
+    details_route: "/dept/eie",
+  },
+  {
+    name: "Dept of MCA",
+    image: "/img/dept/RouteMap/mca.svg",
     details_route: "/dept/me",
+  },
+  {
+    name: "Dept of MBA",
+    image: "/img/dept/RouteMap/mba.svg",
+    details_route: "/dept/mba",
   },
   {
     name: "STEP",
@@ -76,14 +106,11 @@ export const MapData = [
     details_route: "/dept/me",
   },
   {
-    name: "Dept of Electronics and Instrumentation",
-    image: "/img/dept/RouteMap/step.svg",
-    details_route: "/dept/me",
-    details_route: "/dept/me",
+    name: "Dept of PT",
+    image: "/img/dept/RouteMap/pt.svg",
+    details_route: "/dept/pt",
   },
-  {
-    name: "Dept of MCA",
-    image: "/img/dept/RouteMap/mca.svg",
-    details_route: "/dept/me",
-  },
+  
 ];
+
+

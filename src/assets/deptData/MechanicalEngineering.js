@@ -3,23 +3,22 @@ const MechDeptData = {
   name: "Department of Mechanical Engineering",
   aboutUs: {
     content:
-      "The Mechanical Engineering Department is one of the oldest and largest departments at our university. We are committed to providing our students with a world-class education that will  prepare them for successful careers in the field of mechanical engineering.",
+      " The Department of Mechanical Engineering was established in the year 1963. The department offers one Under graduate and one post graduate programs. B.E. in Mechanical Engineering has an intake of 120 students, M.Tech in Maintenance Engineering with an intake of 12 students.",
   },
   achievements: {
     content: [
-      "The department was established in 1900.",
-      "The department has produced over 10,000 graduates.",
-      "The department has won numerous awards, including the ABET Engineering Accreditation Commission's highest recognition, the ETAC Engineering Program of the Year Award.",
-      "The department's faculty and students have made significant contributions to the field of mechanical engineering, including the development of new technologies and the advancement of engineering education.",
+      "Majority of the faculty have obtained Ph.D. and the rest have enrolled and are pursuing Ph.D in their area of Interest.",
+      "Global Initiative Academic Network (GAIN) program has been conducted with international collaborations.",
+      "Faculty empowered with domain-specific training programs resulting in a good number of publications.",
+      "Faculty trained through MOOC, SWAYAM, NPTEL and Coursera programs.",
     ],
   },
   projects: {
     imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
     content: [
-      "The department was established in 1900.",
-      "The department has produced over 10,000 graduates.",
-      "The department has won numerous awards, including the ABET Engineering Accreditation Commission's highest recognition, the ETAC Engineering Program of the Year Award.",
-      "The department's faculty and students have made significant contributions to the field of mechanical engineering, including the development of new technologies and the advancement of engineering education.",
+      "A Smart Bidet With Integrated Minimal Contact Soft Foreign Object Assembly for Cleaning the User Rectal Areas - Dr. Mahesh V.M.",
+      "Autonomous Vehicle as a Medical Assistant – Fighter for COVID 19 - Dr. Mahesh V.M",
+      "Autonomous Drone with Integrated System for Public Safety - Dr. Mahesh V.M",
     ],
   },
 };
