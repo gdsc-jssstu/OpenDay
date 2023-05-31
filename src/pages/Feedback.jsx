@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../client";
-import { useLocation, useNavigate, Navigate } from "react-router-dom";
+import { useLocation, useNavigate} from "react-router-dom";
 
 const Feedback = () => {
   const [text, setText] = useState("");
   const [ratings, setRatings] = useState([]);
-  const [department, setDepartment] = useState(
-    "Computer Science and Engineering"
-  );
-  const location = useLocation();
-  const { depid, token } = location.state;
+  const [department, setDepartment] = useState([]);
+  const [dep, setDep] = useState('Mechanical Engineering')
+  const token = window.sessionStorage.getItem('token');
+  const [depid, setDepId] = useState(1);
   const navigate = useNavigate();
   //const depid = 1
     {/*
@@ -18,9 +17,6 @@ const Feedback = () => {
     */
   }
 
-  if (!token) {
-    return <Navigate to="/" replace />;
-  }
 
   useEffect(() => {
     async function fetchData() {
@@ -29,13 +25,17 @@ const Feedback = () => {
         const { data, error } = await supabase
           .from("Departments")
           .select("Department")
-          .filter("id", "eq", depid);
+          
 
         if (error) {
           throw error;
         }
-        console.log(data);
-        setDepartment(data[0].Department);
+        let depts = []
+        data.map((dept,i)=>{
+            depts.push(dept['Department'])
+        })
+        setDepartment(depts);
+        console.log(depts)
       } catch (error) {
         console.error("Error fetching data:", error.message);
       }
@@ -52,10 +52,27 @@ const Feedback = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log(dep)
+    try {
+        // Replace 'your_table' with the name of your table and 'id_column' with the actual column name for the ID
+        const { data, error } = await supabase
+          .from("Departments")
+          .select("id")
+          .eq("Department",dep)
+
+        if (error) {
+          throw error;
+        }
+        console.log(data)
+        setDepId(data[0].id)
+      } catch (error) {
+        console.error("Error fetching data:", error.message);
+      }
+      console.log(JSON.parse(token).user.id)
     const data = {
       id: Math.floor(Math.random() * 10000),
       depid: depid,
-      userid: token.user.user_metadata.full_name,
+      userid: JSON.parse(token).user.id,
       ratings: ratings,
       feedback: text,
     };
@@ -83,15 +100,34 @@ const Feedback = () => {
     });
     //console.log(ratings[0])
   }
+
+  function handleClick(e){
+    console.log(e.target.value)
+    setDep(e.target.value)
+  }
   return (
     <div className="flex items-stretch bg-[#158EB4] min-h-screen">
-      <div className="grid place-content-center">
-        <div className="mb-16">
+      <div className="flex flex-col items-center">
+        <div className="mb-4">
           <p className="text-center mt-20 p-0 h-8 text-5xl font-extrabold text-white">
             Feedback
           </p>
-          <p className="text-center mt-8 p-0 h-8 text-3xl font-light text-[#8acafa]">
-            {department}
+        </div>
+        <div className="mt-4 p-4 w-72">
+          <select
+              onChange={handleClick}
+              className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600"
+          >
+            {department.map((dept, i)=>
+                <option value={dept} key={i}>
+                    {dept}
+                </option>
+            )}
+          </select>
+        </div>
+        <div className="mb-16">
+          <p className="text-center p-0 h-8 text-3xl font-extrabold text-white">
+            {dep}
           </p>
         </div>
         <form
