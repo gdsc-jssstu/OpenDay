@@ -66,10 +66,10 @@ const DeptDetails = () => {
       {/* TODO: Get next dept link from current dept data */}
       <div className="flex divide-x-2 divide-primary/30 bg-primary/50">
         <a href="#" className="flex-1 py-6 text-center text-lg font-semibold ">
-          Previous Venu
+          Previous Venue
         </a>
         <a href="#" className="flex-1 py-6 text-center text-lg font-semibold ">
-          Next Venu
+          Next Venue
         </a>
       </div>
     </div>

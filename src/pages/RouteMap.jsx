@@ -1,5 +1,5 @@
 import icon from "/img/running.svg";
-import { MapData } from "../assets/deptData/RouteMap";
+import { MapData, trialmap } from "../assets/deptData/RouteMap";
 import RouteComp from "../components/RouteComp";
 
 export default function RouteMap() {
@@ -23,6 +23,21 @@ export default function RouteMap() {
             />
           ))}
         </div>
+        <div className="my-2 px-4 border-2 rounded-md border-amber-600	">
+          <div className="w-full text-center text-2xl my-2 text-light font-semibold text-white">
+            {" "}
+            GOLDEN JUBILEE BHAVAN
+          </div>
+          {trialmap.map((item) => (
+            <RouteComp
+              key={item.name}
+              name={item.name}
+              image={item.image}
+              details_route={item.details_route}
+            />
+          ))}
+        </div>
+
         <div className="py-2 px-8 bg-white rounded-md font-bold my-3">
           <div className="flex align-center justify-between">
             <div>End!</div>
