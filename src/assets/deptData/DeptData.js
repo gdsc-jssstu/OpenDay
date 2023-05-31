@@ -17,6 +17,14 @@ import PSTDeptData from "./PolymerScienceAndTechnology";
 import ComputerScienceAndBusinessSystems from "./ComputerScienceAndBusinessSystems";
 import ElectronicsAndInstrumentationEngineering from "./ElectronicsAndInstrumentation";
 import EnvironmentalEngineering from "./Environmental";
+import Chemistry from "./Chemistry";
+import Physics from "./Physics";
+import Mathematics from "./Maths";
+import CMS from "./Cms";
+import ComputerApplications from "./ComputerApplications";
+import STEP from "./Step";
+import PhysicalEdu from "./PhysicalEducation";
+import Univ from "./Univ";
 
 const DeptData = {
   ME: MechDeptData,
@@ -32,6 +40,14 @@ const DeptData = {
   CSBS: ComputerScienceAndBusinessSystems,
   EIE: ElectronicsAndInstrumentationEngineering,
   ENV: EnvironmentalEngineering,
+  CHE: Chemistry,
+  PHY: Physics,
+  MAT: Mathematics,
+  CMS: CMS,
+  CA: ComputerApplications,
+  STEP: STEP,
+  PE: PhysicalEdu,
+  UNIV: Univ,
 };
 
 export default DeptData;
