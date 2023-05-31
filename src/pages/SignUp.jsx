@@ -55,7 +55,7 @@ const SignUp = ({ setToken }) => {
       <img src={AuthIcon} alt="authIcon" className="authIcon" />
       <div className="info">
         <h3>OPEN DAY'23</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adispicing elit</p>
+        <p>At Your Fingertips: Explore JSSSTU's Open Day Event, Departments and Revolutionary Projects with our User-Friendly Open Day Website! </p>
       </div>
       <form onSubmit={handleSubmit}>
         <input placeholder="Fullname" name="fullName" onChange={handleChange} />

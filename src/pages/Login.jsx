@@ -49,7 +49,7 @@ const Login = ({ setToken }) => {
       <img src={AuthIcon} alt="authIcon" className="authIcon" />
       <div className="info">
         <h3>OPEN DAY'23</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adispicing elit</p>
+        <p>Kindly proceed with the login process using the credentials you have previously registered.</p>
       </div>
       <form onSubmit={handleSubmit}>
         <input placeholder="Email" name="email" onChange={handleChange} />
