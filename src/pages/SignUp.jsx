@@ -12,7 +12,7 @@ const SignUp = ({setToken}) => {
   const [formData,setFormData] = useState({
     fullName:'',email:'',password:'',mobile:''
   })
-
+ 
   console.log(formData)
 
   function handleChange(event){
@@ -26,33 +26,47 @@ const SignUp = ({setToken}) => {
 
   }
 
-  async function handleSubmit(e){
-    e.preventDefault()
-
+  async function handleSubmit(e) {
+    e.preventDefault();
+  
+    const profileData = {
+      id: Math.floor(Math.random() * 10000),
+      Name: formData.fullName,
+      Email: formData.email,
+      Mobile: formData.mobile,
+    };
+  
     try {
-      const { data, error } = await supabase.auth.signUp(
-        {
-          email: formData.email,
-          password: formData.password,
-          options: {
-            data: {
-              full_name: formData.fullName,
-              mobile: formData.mobile,
-            }
-          }
-        }
-      )
-      if (error) throw error
-      else{
-        setToken(data);
-        navigate('/homepage')
+      const { res,errr} = await supabase
+        .from('Profiles')
+        .insert([profileData]);
+  
+      if (errr) {
+        console.log(errr);
       }
-
-      
+  
+      console.log("Inserted data",res);
+      const { data, error } = await supabase.auth.signUp({
+        email: formData.email,
+        password: formData.password,
+        options: {
+          data: {
+            full_name: formData.fullName,
+            mobile: formData.mobile,
+          },
+        },
+      });
+  
+      if (error) throw error;
+      else {
+        setToken(data);
+        navigate('/homepage');
+      }
     } catch (error) {
-      alert(error)
+      alert(error);
     }
   }
+  
 
 
 
