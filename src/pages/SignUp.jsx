@@ -1,51 +1,35 @@
-import { useState } from 'react';
-import { Link,useNavigate } from 'react-router-dom';
-import { supabase } from '../client';
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "../client";
 
-import AuthIcon from "../assets/AuthIcon.svg"
-import "../assets/css/auth.css"
+import AuthIcon from "../assets/AuthIcon.svg";
+import "../assets/css/auth.css";
 
-const SignUp = ({setToken}) => {
+const SignUp = ({ setToken }) => {
+  let navigate = useNavigate();
 
-  let navigate = useNavigate()
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    mobile: "",
+  });
 
-  const [formData,setFormData] = useState({
-    fullName:'',email:'',password:'',mobile:''
-  })
- 
-  console.log(formData)
+  console.log(formData);
 
-  function handleChange(event){
-    setFormData((prevFormData)=>{
-      return{
+  function handleChange(event) {
+    setFormData((prevFormData) => {
+      return {
         ...prevFormData,
-        [event.target.name]:event.target.value
-      }
-
-    })
-
+        [event.target.name]: event.target.value,
+      };
+    });
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-  
-    const profileData = {
-      id: Math.floor(Math.random() * 10000),
-      Name: formData.fullName,
-      Email: formData.email,
-      Mobile: formData.mobile,
-    };
-  
+
     try {
-      const { res,errr} = await supabase
-        .from('Profiles')
-        .insert([profileData]);
-  
-      if (errr) {
-        console.log(errr);
-      }
-  
-      console.log("Inserted data",res);
       const { data, error } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
@@ -56,69 +40,47 @@ const SignUp = ({setToken}) => {
           },
         },
       });
-  
       if (error) throw error;
       else {
         setToken(data);
-        navigate('/homepage');
+        navigate("/routemap");
       }
     } catch (error) {
       alert(error);
     }
   }
-  
-
-
-
 
   return (
-    <div className='login-main'>
-      <img src={AuthIcon} alt="authIcon" className='authIcon' />
-        <div className="info">
-          <h3>OPEN DAY'23</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adispicing elit</p>
-        </div>
+    <div className="login-main">
+      <img src={AuthIcon} alt="authIcon" className="authIcon" />
+      <div className="info">
+        <h3>OPEN DAY'23</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adispicing elit</p>
+      </div>
       <form onSubmit={handleSubmit}>
-        <input 
-          placeholder='Fullname'
-          name='fullName'
-          onChange={handleChange}
-        />
+        <input placeholder="Fullname" name="fullName" onChange={handleChange} />
 
-        <input 
-          placeholder='Email'
-          name='email'
-          onChange={handleChange}
-        />
+        <input placeholder="Email" name="email" onChange={handleChange} />
 
-        <input 
-          placeholder='Mobile'
-          name='mobile'
-          onChange={handleChange}
-        />
+        <input placeholder="Mobile" name="mobile" onChange={handleChange} />
 
-        <input 
-          placeholder='Password'
-          name='password'
+        <input
+          placeholder="Password"
+          name="password"
           type="password"
           onChange={handleChange}
         />
 
-        <button type='submit'>
-          Sign Up
-        </button>
-
-
+        <button type="submit">Sign Up</button>
       </form>
-      <p className='sign-up-link'>
-      Already have an account!<Link to='/'>Sign In</Link> 
+      <p className="sign-up-link">
+        Already have an account!<Link to="/">Sign In</Link>
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default SignUp
-
+export default SignUp;
 
 // const SignUp = () => {
 
@@ -157,32 +119,27 @@ export default SignUp
 //       if (error) throw error
 //       alert('Check your email for verification link')
 
-      
 //     } catch (error) {
 //       alert(error)
 //     }
 //   }
 
-
-
-
 //   return (
 //     <div>
 //       <form onSubmit={handleSubmit}>
-//         <input 
+//         <input
 //           placeholder='Fullname'
 //           name='fullName'
 //           onChange={handleChange}
 //         />
 
-//         <input 
+//         <input
 //           placeholder='Email'
 //           name='email'
 //           onChange={handleChange}
 //         />
 
-
-//         <input 
+//         <input
 //           placeholder='Password'
 //           name='password'
 //           type="password"
@@ -193,9 +150,8 @@ export default SignUp
 //           Submit
 //         </button>
 
-
 //       </form>
-//       Already have an account?<Link to='/'>Login</Link> 
+//       Already have an account?<Link to='/'>Login</Link>
 //     </div>
 //   )
 // }

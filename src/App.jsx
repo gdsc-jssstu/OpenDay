@@ -6,6 +6,7 @@ import {
   Feedback,
   DeptDetails,
   RouteMap,
+  LuckyDraw,
 } from "./pages";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
@@ -27,12 +28,13 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path={"/signup"} element={<SignUp setToken={setToken}/>} />
+        <Route path={"/signup"} element={<SignUp setToken={setToken} />} />
         <Route path={"/"} element={<Login setToken={setToken} />} />
         <Route path={"/dept/:name"} element={<DeptDetails />} />
         <Route path={"/routemap"} element={<RouteMap />} />
         <Route path={"/homepage"} element={<Homepage token={token} />} />
         <Route path={"/feedback"} element={<Feedback token={token} />} />
+        <Route path={"/luckydraw"} element={<LuckyDraw />} />
       </Routes>
     </div>
   );
