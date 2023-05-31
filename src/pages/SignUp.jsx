@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../client";
 
-import AuthIcon from "../assets/AuthIcon.svg";
+import AuthIcon from "../assets/AuthIcon/authIcon.svg";
 import "../assets/css/auth.css";
 
 const SignUp = ({ setToken }) => {

@@ -4,7 +4,7 @@ import { supabase } from "../client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import AuthIcon from "../assets/AuthIcon.svg";
+import AuthIcon from "../assets/AuthIcon/authIcon.svg";
 
 import "../assets/css/auth.css";
 
