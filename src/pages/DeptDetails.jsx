@@ -3,6 +3,7 @@ import DeptSection from "../components/DeptSection";
 import DeptData from "../assets/deptData/DeptData";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const DeptDetails = () => {
   const { name } = useParams();
@@ -49,13 +50,9 @@ const DeptDetails = () => {
         {/* TODO: What does this from do? */}
         <form className="flex flex-col  py-6 items-center text-lg font-semibold ">
           <div className="flex justify-around items-center  py-6 tems-center text-lg font-semibold  w-96">
-            <p className=" text-white text-lg">Enter Dept Code</p>
-            <input
-              type="text"
-              name=""
-              id=""
-              className="p-3 w-40 rounded-lg outline-0"
-            />
+          <button className="m-4 p-4 rounded-2xl shadow-2xl bg-secondary w-min text-lg font-semibold">
+            <Link to='/feedback'>Feedback</Link>
+          </button>
           </div>
           
         </form>

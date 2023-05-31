@@ -3,7 +3,7 @@ const IndustrialProductionDeptData = {
     name: "Department of Industrial and Production Engineering",
     aboutUs: {
       content:
-        " The Department of Electrical  and Electronics Engineering  was established in 1963. The department offers undergraduate, Post Graduate Programs. In addition to these, it also offers M.Sc. Engineering by research and Ph. D programs which provide a platform for bright graduates and postgraduates to conduct research in the state-of-the-art technologies. ",
+        " Industrial and Production Engineering Department came into existence in the year 1980 under the umbrella of JSS Mahavidyapeetha. It became a grant-in-aid department in the year 1983. Ever since its inception, the department has grown from strength to strength over the years in terms of intake of students. The program was started in 1980. The department has an intake of over 60 students. The department has a highly qualified, dedicated faculty team. The department has very good infrastructure facilities.  ",
     },
     achievements: {
       content: [
