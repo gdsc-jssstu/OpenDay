@@ -1,5 +1,5 @@
 const ISEDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/ise.jpeg",
     name: "Department of Information Science and Engineering",
     aboutUs: {
       content:
@@ -13,7 +13,7 @@ const ISEDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/ise.jpeg", "../img/dept/me/ise.jpeg"],
       content: [
         "Inter USB Data Transfer Device - Dr.VanishriArun",
         "Root cause analysis threat interpretation and network survivability prediction device for heterogenous networks survivability prediction device for heterogenous networks - Dr. S.P.Shiva Prakash",

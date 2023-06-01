@@ -1,5 +1,5 @@
 const UnivData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/univ.jpg",
     name: "JSS Science and Technology University",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const UnivData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/univ.jpg", "../img/dept/me/univ.jpg"],
       content: [
         "",
         "",

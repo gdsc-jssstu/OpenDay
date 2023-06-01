@@ -35,12 +35,12 @@ const DeptDetails = () => {
       <div className="p-4 bg-primary flex flex-col gap-y-5 ">
         <DeptSection heading="About Us" content={data.aboutUs.content} />
         <DeptSection
-          heading="Achievements and Milestones"
+          heading="Department Highlights"
           content={data.achievements.content}
           isList={true}
         />
         <DeptSection
-          heading="Projects"
+          heading="Patents/Research Papers/Projects"
           content={data.projects.content}
           // subContent={<p>Pending Image Crousal</p>}
           images={data.projects.imagesPath}

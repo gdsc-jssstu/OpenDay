@@ -1,5 +1,5 @@
 const CseDeptData = {
-  bannerImg: "../img/dept/me/mech.jpg",
+  bannerImg: "../img/dept/me/cse.jpg",
   name: "Department of Computer Science and Engineering",
   aboutUs: {
     content:
@@ -14,7 +14,7 @@ const CseDeptData = {
     ],
   },
   projects: {
-    imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+    imagesPath: ["../img/dept/me/cse.jpg", "../img/dept/me/cse.jpg"],
     content: [
       "Smart energy consumption monitoring meter - Prof. Anil Kumar K M",
       "A Novel Soft X-Ray Image Benchmark Dataset for Automatic, Non-destructive Internal Quality Detection of Mango Fruits - Vani Ashok",

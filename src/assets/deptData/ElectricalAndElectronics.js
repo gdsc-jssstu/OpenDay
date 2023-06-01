@@ -1,5 +1,5 @@
 const EEEDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/electrical.jpg",
     name: "Department of Electronics and Electronics Engineering",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const EEEDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/electrical.jpg", "../img/dept/me/electrical.jpg"],
       content: [
         "Faculty members and research scholars undertake research work along with their regular teaching workload. They have published around “In_Numbers”+ Articles in Journals / Conferences.  ",
         "International Journals - 31",

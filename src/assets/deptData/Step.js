@@ -1,5 +1,5 @@
 const PhyDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/step.jpg",
     name: "SCIENCE & TECHNOLOGY ENTREPRENUER’S PARK",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const PhyDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/step.jpg", "../img/dept/me/step.jpg"],
       content: [
         "Bengaluru Tech Summit Organized by K-Tech, IT/BT at Mysore, at Radisson Blue Plaza",
         "Technology Entrepreneurship Development Program in Aerospace Domain",

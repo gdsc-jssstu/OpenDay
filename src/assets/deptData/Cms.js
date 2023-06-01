@@ -1,5 +1,5 @@
 const ManagementDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/mba.jpg",
     name: "Department of Management Studies",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const ManagementDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/mba.jpg", "../img/dept/me/mba.jpg"],
       content: [
         "A Study on the Impact of Digital Marketing on Consumer Behaviour with reference to Mysore City ",      
     ],

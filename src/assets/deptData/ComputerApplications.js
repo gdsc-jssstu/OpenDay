@@ -1,5 +1,5 @@
 const CaDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/ca.png",
     name: "Department of Computer Applications",
     aboutUs: {
       content:
@@ -13,7 +13,7 @@ const CaDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/ca.png", "../img/dept/me/ca.png"],
       content: [
         "Two-Dimensional Object Detection Device based on Shape Contour - Dr V N Manjunath Aradhya ",
         "An artificial intelligence enabled cryptography based financial analytical tool - Dr S K Niranjan",

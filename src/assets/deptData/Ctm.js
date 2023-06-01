@@ -1,5 +1,5 @@
 const CtmDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/ctm.jpg",
     name: "Department of Construction Technology and Management",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const CtmDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/ctm.jpg", "../img/dept/me/ctm.jpg"],
       content: [
         "The work titled “Evaluation of FRP Composites as Truss Members of Walkway Bridges as an Alternative for Steel” has received sponsorship from Indavara Engineering Co Pvt Ltd.",
       ],

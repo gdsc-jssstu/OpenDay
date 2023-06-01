@@ -1,5 +1,5 @@
 const CheDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/chem.jpg",
     name: "Department of Chemistry",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const CheDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/chem.", "../img/dept/me/chem."],
       content: [
         "synthesis of metal complexes, green synthesis-nanomaterials, Bioinorganic complexes, Medicinal chemistry.",
         "DEVICE AND METHOD FOR AN AUTOMATIC ELECTRONIC PRECISE ADJUSTMENT OF TAPPET CLEARANCE - Shashidhar Rudregowda Madhukar Beejaganahalli Sangameshwara Suprith Sudheer Pooja Thyagaraj Naik",

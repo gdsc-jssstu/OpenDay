@@ -1,5 +1,5 @@
 const PhysicalDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/pt.png",
     name: "Department of Physical Education",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const PhysicalDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/pt.png", "../img/dept/me/pt.png"],
       content: [
         "",
         "",

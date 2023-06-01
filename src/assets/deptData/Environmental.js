@@ -1,5 +1,5 @@
 const ENVDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/env.png",
     name: "Department of Environmental Engineering",
     aboutUs: {
       content:
@@ -16,7 +16,7 @@ const ENVDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/env.png", "../img/dept/me/env.png"],
       content: [
         "Faculty members and research scholars undertake research work along with their regular teaching workload. They have published around “In_Numbers”+ Articles in Journals / Conferences.  ",
         "Shivaprasad K. S., Mahesh S. Electrochemical treatment of two health-care wastewaters – A comparative study, 2022, J. Separation Science and Technology, Taylor and Francis,",

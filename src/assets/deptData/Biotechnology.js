@@ -1,5 +1,5 @@
 const BTDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/bt.jpeg",
     name: "Department of Biotechnology",
     aboutUs: {
       content:
@@ -13,7 +13,7 @@ const BTDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/bt.jpeg", "../img/dept/me/bt.jpeg"],
       content: [
         "Rambod Barzigar, Nanjundappa Haraprasad, Basaralu Yadurappa Sathish Kumar, Mohammad Javad Mehran. Cloning and Expression of Vacuolating Cytotoxin A (VacA) Antigenic Protein in Nicotiana benthamiana Leaves a Potential Source of the Vaccine against Helicobacter pylori. International Journal of Pharmaceutical Investigation. 2021;11(1):88-93. Impact Factor: 4.845, Web of Science Indexed Journal ",
         "Azadirachta indica Juss (Neem) as a contraceptive: An evidence-based review on its pharmacological efficiency. Shashank M Patil., Prithvi S Shirahatti., Chandana Kumari., Ramith Ramu and Nagendra Prasad M N., Sandeep Kumar.,Phytomedicine.https://doi.org/10.1016/j.phymed.2021.153596 Impact factor 5.3",

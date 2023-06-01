@@ -1,5 +1,5 @@
 const CVDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/civil.png",
     name: "Department of Civil Engineering",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const CVDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/civil.png", "../img/dept/me/civil.png"],
       content: [
         "Krupa H R, S K Prasad, Influence of Nail fixity to Facing on the Performance of Soil Nail System-Ground Improvement Technique – International Journal of Engineering Research and Technology (IJERT), Vol 9, Issue 8, August 2020",
         "Syed Salik Ahmed and Sharath H P (2020) “ A Comparative study of CFST Suspension bridge and CFST truss bridge using ANSYS” in International Journal of Latest Trends in Engineering and Technology IJLTET, Volume 17, Issue 1, July 2020",

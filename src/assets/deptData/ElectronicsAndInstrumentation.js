@@ -1,5 +1,5 @@
 const EIDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/electronics.jpeg",
     name: "Department of Electronics and Instrumentation Engineering",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const EIDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/electronics.jpeg", "../img/dept/me/electronics.jpeg"],
       content: [
         "Chanre Rheumatology & Immunology Center & Research",
         "JSS AHER and JSS Hospital Outcome: Joint Publications in Q4 journal",

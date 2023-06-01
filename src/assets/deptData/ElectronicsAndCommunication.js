@@ -1,5 +1,5 @@
 const ECEDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/electronics.jpeg",
     name: "Department of Electronics and Communication Engineering",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const ECEDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/electronics.jpeg", "../img/dept/me/electronics.jpeg"],
       content: [
         "IoT based robot for sanitization. - Rajeev Kumar,Dr. Shashidhar Rudregowda, Dr. Roopa Manibyrappa, Dr. Neha Sharma, Dr. Khyati Marwah, Loveleena Mukhija, Dr. Nagaraj Mallikarjun Lutimath ",
         "Novel Nano Coating Based Opto Electronic Devices - Dr. Gayitri H M",

@@ -1,5 +1,5 @@
 const IndustrialProductionDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/ip.jpg",
     name: "Department of Industrial and Production Engineering",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const IndustrialProductionDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/ip.jpg", "../img/dept/me/ip.jpg"],
       content: [
         "Dr. Dayakar G Devaru, Bhaskaran Gopalakrishnan, “Regression Model to Estimate Electrical Energy Consumption of Lumber Sawing based on product, process and system parameters”, Energy Efficiency Journal, October 2020 13(8), 1799-1824, Springer Publications. (Scopus Indexed Journal)",
         "	Dr. Skanda M G, Dr. V Ramesh, Dr. D Arunkumar, “Importance of Error Management in Occupational Safety: A Case Survey Conducted in Manufacturing Set-ups”, Design Engineering, 13190-13200, Vol 2021, Issue 08",

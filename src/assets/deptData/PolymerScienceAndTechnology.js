@@ -1,5 +1,5 @@
 const PSTDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/pst.jpg",
     name: "Department of Polymer Science and Technology",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const PSTDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/pst.jpg", "../img/dept/me/pst.jpg"],
       content: [
         "Siddaramaiah, Nithin Kundachira Subramani, Sachidananda S, Shilpa K.N and M. Jagjeevan Raj: Multifunctional Polymer Nanocomposite Thick film Based Optical Band Pass Filter and Photovoltaic Converter (material), Application number 201841009671 (project number IP-3570-IN- 17181077-NPA-2019) March 2019.",
         "Siddaramaiah, Nithin, K.S., Sachidananda, S., Shilpa K.N. and B.M. Jagajeevan Raj “Biodegradable Polymer Based Fruit Packaging Materials with Improved Shelf life”, (under process).",

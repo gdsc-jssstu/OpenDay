@@ -1,5 +1,5 @@
 const PhyDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/physics.jpeg",
     name: "Department of Physics",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const PhyDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/physics.jpeg", "../img/dept/me/physics.jpeg"],
       content: [
         "Rayleigh scattering of 145- and 279 –KeV gamma rays in Al, Cu, Sn and Pb at forward angles.Physics review letter A: 33 (1986), pp 2301.",
         "Ionic conductivity and free volume related microstructural properties of LiClO4/PVA/NaAlg polymer composites: Positron annihilation spectroscopic studies Sheela, R.F. Bhajantri, P.M.G. Nambissan, V. Ravindrachary, Blaise Lobo, Jagadish Naik, Sunil G. Rathod, Journal of Non-Crystalline Solids 454 (2016) 19–30",

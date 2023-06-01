@@ -1,5 +1,5 @@
 const CSBSDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/CSBS.jpg",
     name: "Computer Science & Business Systems(CSBS)",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const CSBSDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/CSBS.jpg", "../img/dept/me/CSBS.jpg"],
       content: [
         "Inter USB Data Transfer Device - Dr.VanishriArun",
         "Root cause analysis threat interpretation and network survivability prediction device for heterogenous networks survivability prediction device for heterogenous networks - Dr. S.P.Shiva Prakash",

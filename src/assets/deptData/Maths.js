@@ -1,5 +1,5 @@
 const MathsDeptData = {
-    bannerImg: "../img/dept/me/mech.jpg",
+    bannerImg: "../img/dept/me/maths.jpg",
     name: "Department of Mathematics",
     aboutUs: {
       content:
@@ -14,7 +14,7 @@ const MathsDeptData = {
       ],
     },
     projects: {
-      imagesPath: ["../img/dept/me/mech.jpg", "../img/dept/me/mech.jpg"],
+      imagesPath: ["../img/dept/me/maths.jpg", "../img/dept/me/maths.jpg"],
       content: [
         "Faculty members and research scholars undertake research work along with their regular teaching workload. They have published around “In_Numbers”+ Articles in Journals / Conferences.  ",
         "Ramanujan’s Eisenstein Series and its Applications Duration: 3 Years - 	Dr. R. G. Veeresha",
