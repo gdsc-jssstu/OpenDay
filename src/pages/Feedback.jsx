@@ -8,6 +8,7 @@ const Feedback = () => {
   const [ratings, setRatings] = useState([]);
   const [department, setDepartment] = useState([]);
   const token = window.sessionStorage.getItem("token");
+  const [error, setError] = useState();
 
   const navigate = useNavigate();
 
@@ -15,7 +16,7 @@ const Feedback = () => {
 
   useEffect(() => {
     if (!DeptData.hasOwnProperty(name.toUpperCase())) {
-      setError("Invalid Url");
+      navigate("/routemap");
     } else {
       setDepartment(DeptData[name.toUpperCase()]);
     }

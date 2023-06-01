@@ -1,19 +1,20 @@
 import BannerImage from "../components/BannerImage";
 import DeptSection from "../components/DeptSection";
 import DeptData from "../assets/deptData/DeptData";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const DeptDetails = () => {
   const { name } = useParams();
-
+  const navigate = useNavigate();
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     if (!DeptData.hasOwnProperty(name.toUpperCase())) {
       setError("Invalid Url");
+      navigate("/routemap");
     } else {
       setData(DeptData[name.toUpperCase()]);
     }
