@@ -22,6 +22,8 @@ const MathsDeptData = {
       "Ramanujan’s Eisenstein Series and its Applications Duration: 3 Years - 	Dr. R. G. Veeresha",
     ],
   },
+  nextVenue:"/dept/biotech",
+  prevVenue:"/dept/che",
 };
 
 export default MathsDeptData;

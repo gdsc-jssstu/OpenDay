@@ -21,8 +21,8 @@ const PlacementAndTrainingDeptData = {
         "Block Chain Workshop",
       ],
     },
-    nextVenue:"/dept/step",
-    prevVenue:"/dept/cms",
+    nextVenue:"/dept/ca",
+    prevVenue:"/dept/eie",
   };
   
   export default PlacementAndTrainingDeptData;

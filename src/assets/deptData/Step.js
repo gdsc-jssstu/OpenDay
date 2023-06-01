@@ -22,6 +22,8 @@ const PhyDeptData = {
       "SJCE-STEP SUPPORTING START-UPS AND INCUBATES DURING COVID-19 PANDEMIC",
     ],
   },
+  nextVenue:"/dept/pe",
+  prevVenue:"/dept/cms",
 };
 
 export default PhyDeptData;

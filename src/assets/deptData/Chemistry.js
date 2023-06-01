@@ -23,6 +23,8 @@ const CheDeptData = {
       "Establishment Of Centre for Facile Synthesis of Metal Complexes and Study for Interaction with Biomolecules. 30Lakhs in Grant - Dr.P.Mallu",
     ],
   },
+  nextVenue:"/dept/mat",
+  prevVenue:"/dept/phy",
 };
 
 export default CheDeptData;

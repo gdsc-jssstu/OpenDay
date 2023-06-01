@@ -21,6 +21,8 @@ const ManagementDeptData = {
       "A Study on the Impact of Digital Marketing on Consumer Behaviour with reference to Mysore City ",
     ],
   },
+  nextVenue:"/dept/ca",
+  prevVenue:"/dept/step",
 };
 
 export default ManagementDeptData;

@@ -64,12 +64,12 @@ const DeptDetails = () => {
 
       {/* TODO: Get next dept link from current dept data */}
       <div className="flex divide-x-2 divide-primary/30 bg-primary/50">
-      <a href={data.prevVenue} className="flex-1 py-6 text-center text-lg font-semibold ">
+      <Link to={data.prevVenue} className="flex-1 py-6 text-center text-lg font-semibold ">
           Previous Venue
-        </a>
-        <a href={data.nextVenue} className="flex-1 py-6 text-center text-lg font-semibold ">
+        </Link>
+        <Link href={data.nextVenue} className="flex-1 py-6 text-center text-lg font-semibold ">
           Next Venue
-        </a>
+        </Link>
       </div>
     </div>
   );

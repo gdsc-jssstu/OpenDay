@@ -26,6 +26,8 @@ const ENVDeptData = {
       "Renukumar K S, Pushpa Tuppad, Anjaneyappa, 2021, Enhancing Non-Revenue Water Reduction by Incorporating Service Level Benchmarks and Best Practices, Journal of Indian Water Works Association.",
     ],
   },
+  nextVenue:"/dept/ipe",
+  prevVenue:"/dept/civil",
 };
 
 export default ENVDeptData;

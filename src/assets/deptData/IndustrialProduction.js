@@ -23,6 +23,8 @@ const IndustrialProductionDeptData = {
       "Dr. Manjunatha B, Dr. Neetha K, A S Bindhu, “Optimization of a Plant Layout for the Forklift Movement for a Coffee Plant”, Journal of PSYCHOLOGY AND EDUCATION (2021) 58(5), ISSN 1553 – 6939",
     ],
   },
+  nextVenue:"/dept/pst",
+  prevVenue:"/dept/env",
 };
 
 export default IndustrialProductionDeptData;
