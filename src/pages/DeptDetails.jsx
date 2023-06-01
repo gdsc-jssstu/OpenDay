@@ -39,13 +39,15 @@ const DeptDetails = () => {
           content={data.achievements.content}
           isList={true}
         />
-        <DeptSection
-          heading="Patents/Research Papers/Projects"
-          content={data.projects.content}
-          // subContent={<p>Pending Image Crousal</p>}
-          images={data.projects.imagesPath}
-          isList={true}
-        />
+        {data.projects && (
+          <DeptSection
+            heading="Patents/Research Papers/Projects"
+            content={data.projects.content}
+            // subContent={<p>Pending Image Crousal</p>}
+            // images={data.projects.imagesPath}
+            isList={true}
+          />
+        )}
 
         {/* TODO: What does this from do? */}
         <form className="flex flex-col  py-6 items-center text-lg font-semibold ">
