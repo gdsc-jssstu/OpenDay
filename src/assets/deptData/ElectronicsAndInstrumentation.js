@@ -20,6 +20,8 @@ const EIDeptData = {
         "JSS AHER and JSS Hospital Outcome: Joint Publications in Q4 journal",
       ],
     },
+    nextVenue:"/dept/ca",
+    prevVenue:"/dept/csbs",
   };
   
   export default EIDeptData;

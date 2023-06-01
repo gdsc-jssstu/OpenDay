@@ -20,6 +20,8 @@ const BTDeptData = {
         "Bio absorption of Oxybenzene using bio absorbent prepared from raw wastes of Zea mays and comparative study by using commercially available activated carbon. Lakshmi S., Syed Baker., Chandan S., Ashwini Prasad., Asad Syed., Najat M., Shiv Prasad., Al-Kherif., Darshan, Abdallah., Elgorban and Nagendra Prasad. M. NSaudi Journal of Biological Science.",
       ],
     },
+    nextVenue:"/dept/ctm",
+    prevVenue:"/dept/mat",
   };
   
   export default BTDeptData;

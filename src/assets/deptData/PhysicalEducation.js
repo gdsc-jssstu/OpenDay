@@ -21,6 +21,8 @@ const PhysicalDeptData = {
         "",
       ],
     },
+    nextVenue:"/dept/#",
+    prevVenue:"/dept/step",
   };
   
   export default PhysicalDeptData;

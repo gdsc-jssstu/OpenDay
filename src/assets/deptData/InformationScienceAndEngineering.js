@@ -20,6 +20,8 @@ const ISEDeptData = {
         "A device for self recognition of veins and insertion of intravenous cannula procedure. - Dr.VanishriArun",
       ],
     },
+    nextVenue:"/dept/csbs",
+    prevVenue:"/dept/cse",
   };
   
   export default ISEDeptData;

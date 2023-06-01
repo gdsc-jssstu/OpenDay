@@ -19,6 +19,8 @@ const CtmDeptData = {
         "The work titled “Evaluation of FRP Composites as Truss Members of Walkway Bridges as an Alternative for Steel” has received sponsorship from Indavara Engineering Co Pvt Ltd.",
       ],
     },
+    nextVenue:"/dept/civil",
+    prevVenue:"/dept/ctm",
   };
   
   export default CtmDeptData;

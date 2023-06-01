@@ -22,6 +22,8 @@ const CseDeptData = {
       "System and Method of creating hand gesture Benchmark images data sets for recognizing and interpreting American sign language - Dr. Srinath S",
     ],
   },
+  nextVenue:"/dept/ise",
+  prevVenue:"/dept/pst",
 };
 
 export default CseDeptData;

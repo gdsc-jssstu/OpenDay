@@ -20,6 +20,8 @@ const CaDeptData = {
         "AWS: Cloud data performance improved using machine learning and deep learning programming. - Dr S K Niranjan",
       ],
     },
+    nextVenue:"/dept/cms",
+    prevVenue:"/dept/eie",
   };
   
   export default CaDeptData;

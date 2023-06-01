@@ -21,6 +21,8 @@ const EEEDeptData = {
         "International Conferences - 46",
       ],
     },
+    nextVenue:"/dept/ece",
+    prevVenue:"#",
   };
   
   export default EEEDeptData;

@@ -22,6 +22,8 @@ const CVDeptData = {
         "Jeevitha G B and Sharath H P (2020) “ Seismic Analysis of Setback and Stepback Building Resting on Sloping Ground” in International Journal of Latest Trends in Engineering and Technology IJLTET, Volume 17, Issue 2, August 2020.",
       ],
     },
+    nextVenue:"/dept/env",
+    prevVenue:"/dept/ctm",
   };
   
   export default CVDeptData;

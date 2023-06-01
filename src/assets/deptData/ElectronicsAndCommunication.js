@@ -21,6 +21,8 @@ const ECEDeptData = {
         "	Hand Gesture Communication and Information Control - Dr. Gayitri H M",
       ],
     },
+    nextVenue:"/dept/me",
+    prevVenue:"/dept/eee",
   };
   
   export default ECEDeptData;
