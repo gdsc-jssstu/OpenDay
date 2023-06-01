@@ -12,7 +12,9 @@ export default function RouteMap() {
         <div className="py-2 px-8 bg-white rounded-md font-bold mb-3">
           <div className="flex align-center justify-between">
             <img style={{ height: "25px" }} src={icon} />
+            <Link to="/dept/eee">
             <div>Start</div>
+            </Link>
           </div>
         </div>
         <div>
