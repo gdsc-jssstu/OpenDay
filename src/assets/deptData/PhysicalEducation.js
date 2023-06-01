@@ -14,10 +14,6 @@ const PhysicalDeptData = {
       "Ragavendra H R Studied Computer Science at SJCE. He participated in the All India Kick Boxing Federation Cup-2014 Haryana Kurukshetra from 13-02-2014 to 17-02-2014 under (65Kg category) He secured the Gold Medal.",
     ],
   },
-  projects: {
-    imagesPath: ["../img/dept/me/pt.png", "../img/dept/me/pt.png"],
-    content: ["", "", ""],
-  },
 };
 
 export default PhysicalDeptData;

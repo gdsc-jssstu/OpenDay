@@ -14,10 +14,6 @@ const UnivData = {
       "Faculty empowered with domain-specific training programs resulting in good number of publications.",
     ],
   },
-  projects: {
-    imagesPath: ["../img/dept/me/univ.jpg", "../img/dept/me/univ.jpg"],
-    content: ["", "", ""],
-  },
 };
 
 export default UnivData;
