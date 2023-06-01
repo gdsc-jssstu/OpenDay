@@ -1,4 +1,5 @@
 const CtmDeptData = {
+
   id: 9,
   bannerImg: "../img/dept/me/ctm.jpg",
   name: "Department of Construction Technology and Management",
@@ -23,3 +24,4 @@ const CtmDeptData = {
 };
 
 export default CtmDeptData;
+

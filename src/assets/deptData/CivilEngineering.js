@@ -1,4 +1,5 @@
 const CVDeptData = {
+
   id: 10,
   bannerImg: "../img/dept/me/civil.png",
   name: "Department of Civil Engineering",
@@ -26,3 +27,4 @@ const CVDeptData = {
 };
 
 export default CVDeptData;
+

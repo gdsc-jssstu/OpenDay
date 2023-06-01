@@ -1,4 +1,5 @@
 const CheDeptData = {
+
   id: 6,
   bannerImg: "../img/dept/me/chem.jpg",
   name: "Department of Chemistry",
@@ -24,4 +25,4 @@ const CheDeptData = {
   },
 };
 
-export default CheDeptData;
+

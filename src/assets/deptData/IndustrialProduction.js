@@ -1,4 +1,5 @@
 const IndustrialProductionDeptData = {
+
   id: 12,
   bannerImg: "../img/dept/me/ip.jpg",
   name: "Department of Industrial and Production Engineering",
@@ -25,3 +26,4 @@ const IndustrialProductionDeptData = {
 };
 
 export default IndustrialProductionDeptData;
+

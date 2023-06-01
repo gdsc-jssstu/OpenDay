@@ -1,4 +1,5 @@
 const ENVDeptData = {
+
   id: 11,
   bannerImg: "../img/dept/me/env.png",
   name: "Department of Environmental Engineering",
@@ -28,3 +29,4 @@ const ENVDeptData = {
 };
 
 export default ENVDeptData;
+

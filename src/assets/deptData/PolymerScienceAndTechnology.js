@@ -1,4 +1,5 @@
 const PSTDeptData = {
+
   id: 13,
   bannerImg: "../img/dept/me/pst.jpg",
   name: "Department of Polymer Science and Technology",
@@ -26,3 +27,4 @@ const PSTDeptData = {
 };
 
 export default PSTDeptData;
+

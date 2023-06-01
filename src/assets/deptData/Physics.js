@@ -1,4 +1,5 @@
 const PhyDeptData = {
+
   id: 5,
   bannerImg: "../img/dept/me/physics.jpeg",
   name: "Department of Physics",
@@ -25,3 +26,4 @@ const PhyDeptData = {
 };
 
 export default PhyDeptData;
+

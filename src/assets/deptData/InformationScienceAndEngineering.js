@@ -1,4 +1,5 @@
 const ISEDeptData = {
+
   id: 3,
   bannerImg: "../img/dept/me/ise.jpeg",
   name: "Department of Information Science and Engineering",
@@ -24,3 +25,4 @@ const ISEDeptData = {
 };
 
 export default ISEDeptData;
+

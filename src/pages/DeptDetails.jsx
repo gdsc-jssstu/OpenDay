@@ -40,6 +40,7 @@ const DeptDetails = () => {
           content={data.achievements.content}
           isList={true}
         />
+
         {data.projects && (
           <DeptSection
             heading="Patents/Research Papers/Projects"
@@ -49,6 +50,7 @@ const DeptDetails = () => {
             isList={true}
           />
         )}
+
 
         {/* TODO: What does this from do? */}
         <form className="flex flex-col  py-6 items-center text-lg font-semibold ">
@@ -62,10 +64,10 @@ const DeptDetails = () => {
 
       {/* TODO: Get next dept link from current dept data */}
       <div className="flex divide-x-2 divide-primary/30 bg-primary/50">
-        <a href="#" className="flex-1 py-6 text-center text-lg font-semibold ">
+      <a href={data.prevVenue} className="flex-1 py-6 text-center text-lg font-semibold ">
           Previous Venue
         </a>
-        <a href="#" className="flex-1 py-6 text-center text-lg font-semibold ">
+        <a href={data.nextVenue} className="flex-1 py-6 text-center text-lg font-semibold ">
           Next Venue
         </a>
       </div>

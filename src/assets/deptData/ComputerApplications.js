@@ -1,4 +1,5 @@
 const CaDeptData = {
+
   id: 17,
   bannerImg: "../img/dept/me/ca.png",
   name: "Department of Computer Applications",
@@ -24,3 +25,4 @@ const CaDeptData = {
 };
 
 export default CaDeptData;
+

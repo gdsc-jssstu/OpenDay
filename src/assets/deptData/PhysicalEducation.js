@@ -1,4 +1,5 @@
 const PhysicalDeptData = {
+
   id: 20,
   bannerImg: "../img/dept/me/pt.png",
   name: "Department of Physical Education",
@@ -16,4 +17,4 @@ const PhysicalDeptData = {
   },
 };
 
-export default PhysicalDeptData;
+

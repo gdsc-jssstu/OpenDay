@@ -24,7 +24,12 @@ import ComputerApplications from "./ComputerApplications";
 import CMS from "./Cms";
 import STEP from "./Step";
 import PhysicalEdu from "./PhysicalEducation";
+
 import ElectronicsAndInstrumentationEngineering from "./ElectronicsAndInstrumentation";
+
+import Univ from "./Univ";
+import PlacementAndTrainingDeptData from "./PlacementAndTraining";
+
 
 const DeptData = {
   ME: MechDeptData,
@@ -48,6 +53,7 @@ const DeptData = {
   STEP: STEP,
   PE: PhysicalEdu,
   UNIV: Univ,
+  PLACEMENT: PlacementAndTrainingDeptData,
 };
 
 export default DeptData;
