@@ -26,8 +26,6 @@ import STEP from "./Step";
 import PhysicalEdu from "./PhysicalEducation";
 
 import ElectronicsAndInstrumentationEngineering from "./ElectronicsAndInstrumentation";
-
-import Univ from "./Univ";
 import PlacementAndTrainingDeptData from "./PlacementAndTraining";
 
 
