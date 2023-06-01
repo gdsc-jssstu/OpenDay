@@ -53,6 +53,7 @@ const Feedback = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(dep)
+    let id;
     try {
         // Replace 'your_table' with the name of your table and 'id_column' with the actual column name for the ID
         const { data, error } = await supabase
@@ -63,22 +64,29 @@ const Feedback = () => {
         if (error) {
           throw error;
         }
-        console.log(data)
+        console.log(data[0].id)
+        id = data[0].id;
         setDepId(data[0].id)
+        
       } catch (error) {
         console.error("Error fetching data:", error.message);
       }
-      console.log(JSON.parse(token).user.id)
-    const data = {
+      console.log(JSON.parse(token).user)
+    const Insertdata = {
       id: Math.floor(Math.random() * 10000),
-      depid: depid,
+      depid: id,
       userid: JSON.parse(token).user.id,
       ratings: ratings,
       feedback: text,
+      Name:JSON.parse(token).user.user_metadata.full_name,
+      Email:JSON.parse(token).user.email,
+      PhoneNumber:JSON.parse(token).user.user_metadata.mobile
+      
     };
+    console.log(Insertdata)
     try {
       // Replace 'your_table' with the name of your table
-      const { res, error } = await supabase.from("Feedbacks").insert([data]);
+      const { res, error } = await supabase.from("Feedbacks").insert([Insertdata]);
 
       if (error) {
         throw error;
