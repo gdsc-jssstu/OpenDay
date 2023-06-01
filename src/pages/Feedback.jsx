@@ -8,7 +8,7 @@ const Feedback = () => {
   const [ratings, setRatings] = useState([]);
   const [department, setDepartment] = useState([]);
   const token = window.sessionStorage.getItem("token");
-  const [depid, setDepId] = useState(2);
+
   const navigate = useNavigate();
 
   const { name } = useParams();
@@ -62,23 +62,22 @@ const Feedback = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(department.name);
-    let id;
-    try {
-      // Replace 'your_table' with the name of your table and 'id_column' with the actual column name for the ID
-      const { data, error } = await supabase
-        .from("Departments")
-        .select("id")
-        .eq("Department", department.name);
+    // let id;
+    // try {
+    //   // Replace 'your_table' with the name of your table and 'id_column' with the actual column name for the ID
+    //   const { data, error } = await supabase
+    //     .from("Departments")
+    //     .select("id")
+    //     .eq("Department", department.name);
 
-      if (error) {
-        throw error;
-      }
-      console.log(data[0].id);
-      id = data[0].id;
-      setDepId(data[0].id);
-    } catch (error) {
-      console.error("Error fetching data:", error.message);
-    }
+    //   if (error) {
+    //     throw error;
+    //   }
+    //   console.log(data[0].id);
+    //   id = data[0].id;
+    // } catch (error) {
+    //   console.error("Error fetching data:", error.message);
+    // }
     console.log(JSON.parse(token).user);
     const Insertdata = {
       depid: department.id,
@@ -108,6 +107,7 @@ const Feedback = () => {
     navigate("/routemap");
     return "hi";
   }
+
   function handleRatingChange(index, rating) {
     setRatings((prevRatings) => {
       const updatedRatings = [...prevRatings];
@@ -122,21 +122,21 @@ const Feedback = () => {
   //   setDep(e.target.value);
   // }
   return (
-    <div className="flex bg-[#158EB4] min-h-screen py-6">
+    <div className="flex justify-center bg-[#158EB4] min-h-screen py-6">
       <div className="flex flex-col items-center gap-y-10">
-        <p className="text-center  text-5xl font-extrabold text-white">
+        <p className="text-center text-5xl font-extrabold text-white">
           Feedback
         </p>
-        <p className="text-center text-3xl font-extrabold text-white">
+        <p className="text-center px-2 text-3xl font-extrabold text-white">
           {department.name}
         </p>
 
         <form
-          className="flex flex-col items-center gap-y-5 px-6"
+          className="flex flex-col items-center w-full gap-y-5 px-6"
           onSubmit={handleSubmit}
         >
           {questions.map((question, i) => (
-            <div className="w-full" key={i}>
+            <div className="w-full max-w-md" key={i}>
               <p className="text-justify text-lg mb-2">{question}</p>
               <div className="flex justify-between ">
                 {radioOptions.map((option) => (
