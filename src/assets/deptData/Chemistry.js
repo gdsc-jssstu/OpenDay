@@ -25,4 +25,6 @@ const CheDeptData = {
   },
 };
 
+export default CheDeptData;
+
 

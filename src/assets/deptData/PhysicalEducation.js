@@ -17,4 +17,4 @@ const PhysicalDeptData = {
   },
 };
 
-
+export default PhysicalDeptData;
