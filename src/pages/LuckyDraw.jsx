@@ -1,69 +1,75 @@
-import { useState } from "react";
-
-const testing_data = [
-  {
-    name: "John Doe",
-    id: 1,
-    email: "johndoe@example.com",
-    phone: "555-1234",
-  },
-  {
-    name: "Jane Smith",
-    id: 2,
-    email: "janesmith@example.com",
-    phone: "555-5678",
-  },
-  {
-    name: "Michael Johnson",
-    id: 3,
-    email: "michaeljohnson@example.com",
-    phone: "555-9012",
-  },
-  {
-    name: "Emily Davis",
-    id: 4,
-    email: "emilydavis@example.com",
-    phone: "555-3456",
-  },
-  {
-    name: "Robert Wilson",
-    id: 5,
-    email: "robertwilson@example.com",
-    phone: "555-7890",
-  },
-];
+import { useEffect, useState } from "react";
+import { supabase } from "../client";
 
 const LuckyDraw = () => {
   const [list, setList] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [feedbackList, setFeedbackList] = useState(null);
+
+  const getFeedbacks = async () => {
+    try {
+      setLoading(true);
+      const { data, error } = await supabase
+        .from("Feedbacks")
+        .select(`name, email, mobile`);
+
+      if (error) throw error;
+      console.log(data);
+
+      setFeedbackList(data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getFeedbacks();
+  }, []);
 
   const generateLuckyWinners = () => {
+    setLoading(true);
+
     // Generate n unique numbers
+
     var randomIndexes = [];
     var i = 0;
-    while (i < 5) {
-      var r = Math.floor(Math.random() * testing_data.length);
-      if (randomIndexes.indexOf(r) === -1) {
-        randomIndexes.push(r);
-        i++;
-      }
-    }
 
-    // Get users with index from randomIndexes
-    var tempSelectedUsers = [];
-    randomIndexes.forEach((randomIndex) => {
-      tempSelectedUsers.push(testing_data[randomIndex]);
-    });
-    setList(tempSelectedUsers);
+    if (feedbackList) {
+      while (i < 5) {
+        var r = Math.floor(Math.random() * feedbackList.length);
+        if (randomIndexes.indexOf(r) === -1) {
+          randomIndexes.push(r);
+          i++;
+        }
+      }
+
+      console.log(feedbackList);
+
+      // select users with index from randomIndexes
+      var tempSelectedUsers = [];
+      randomIndexes.forEach((randomIndex) => {
+        tempSelectedUsers.push(feedbackList[randomIndex]);
+      });
+      setList(tempSelectedUsers);
+      console.log(randomIndexes);
+    } else {
+      getFeedbacks();
+    }
+    setLoading(false);
   };
 
   return (
-    <div className="w-screen h-screen bg-yellow-200/60">
-      <div className="flex flex-col items-center pt-12 gap-y-12">
-        <h4 className=" font-bold text-4xl">Lucky Draw</h4>
+    <div className="min-w-full min-h-screen pb-40 flex items-center justify-center  bg-yellow-200/60">
+      <div className="flex flex-col items-center gap-y-12">
+        <h4 className=" font-bold text-4xl">
+          {loading ? "Loading" : "Lucky Draw"}
+        </h4>
         {!list && (
           <button
             onClick={generateLuckyWinners}
-            className="transition-all  bg-blue-600 rounded-sm drop-shadow-md text-lg p-4 text-zinc-50"
+            className="transition-all flex items-center bg-blue-600 rounded-sm drop-shadow-md text-lg p-4 text-zinc-50"
           >
             Generate Lucky Winners
           </button>
@@ -74,7 +80,7 @@ const LuckyDraw = () => {
             {list.map((item) => (
               <li className="py-1  ">
                 <p className="text-3xl font-semibold">{item.name}</p>
-                <p className="text-lg">Ph: {item.phone}</p>
+                <p className="text-lg">Ph: {item.mobile}</p>
               </li>
             ))}
           </ol>
