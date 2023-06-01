@@ -1,98 +1,106 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../client";
-import { useLocation, useNavigate} from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import DeptData from "../assets/deptData/DeptData";
 
 const Feedback = () => {
   const [text, setText] = useState("");
   const [ratings, setRatings] = useState([]);
   const [department, setDepartment] = useState([]);
-  const [dep, setDep] = useState('Mechanical Engineering')
-  const token = window.sessionStorage.getItem('token');
-  const [depid, setDepId] = useState(1);
+  const token = window.sessionStorage.getItem("token");
+  const [depid, setDepId] = useState(2);
   const navigate = useNavigate();
+
+  const { name } = useParams();
+
+  useEffect(() => {
+    if (!DeptData.hasOwnProperty(name.toUpperCase())) {
+      setError("Invalid Url");
+    } else {
+      setDepartment(DeptData[name.toUpperCase()]);
+    }
+  }, []);
   //const depid = 1
-    {/*
+  {
+    /*
         send departmentid (depid) as a prop
 
     */
   }
 
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       // Replace 'your_table' with the name of your table and 'id_column' with the actual column name for the ID
+  //       const { data, error } = await supabase
+  //         .from("Departments")
+  //         .select("Department");
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        // Replace 'your_table' with the name of your table and 'id_column' with the actual column name for the ID
-        const { data, error } = await supabase
-          .from("Departments")
-          .select("Department")
-          
-
-        if (error) {
-          throw error;
-        }
-        let depts = []
-        data.map((dept,i)=>{
-            depts.push(dept['Department'])
-        })
-        setDepartment(depts);
-        console.log(depts)
-      } catch (error) {
-        console.error("Error fetching data:", error.message);
-      }
-    }
-    fetchData();
-  }, []);
+  //       if (error) {
+  //         throw error;
+  //       }
+  //       let depts = [];
+  //       data.map((dept, i) => {
+  //         depts.push(dept["Department"]);
+  //       });
+  //       setDepartment(depts);
+  //       console.log(depts);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error.message);
+  //     }
+  //   }
+  //   fetchData();
+  // }, []);
 
   const questions = [
     "On a scale of 1 to 5, how would you rate your overall experience at the stall?",
     "On a scale of 1 to 5, how convinced are you with the explaination from the speakers?",
-    "On a scale of 1 to 5, how well does the department address and resolve issues or concerns?"
+    "On a scale of 1 to 5, how well does the department address and resolve issues or concerns?",
   ];
   const radioOptions = [1, 2, 3, 4, 5];
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(dep)
+    console.log(department.name);
     let id;
     try {
-        // Replace 'your_table' with the name of your table and 'id_column' with the actual column name for the ID
-        const { data, error } = await supabase
-          .from("Departments")
-          .select("id")
-          .eq("Department",dep)
+      // Replace 'your_table' with the name of your table and 'id_column' with the actual column name for the ID
+      const { data, error } = await supabase
+        .from("Departments")
+        .select("id")
+        .eq("Department", department.name);
 
-        if (error) {
-          throw error;
-        }
-        console.log(data[0].id)
-        id = data[0].id;
-        setDepId(data[0].id)
-        
-      } catch (error) {
-        console.error("Error fetching data:", error.message);
+      if (error) {
+        throw error;
       }
-      console.log(JSON.parse(token).user)
+      console.log(data[0].id);
+      id = data[0].id;
+      setDepId(data[0].id);
+    } catch (error) {
+      console.error("Error fetching data:", error.message);
+    }
+    console.log(JSON.parse(token).user);
     const Insertdata = {
-      id: Math.floor(Math.random() * 10000),
-      depid: id,
+      depid: department.id,
       userid: JSON.parse(token).user.id,
       ratings: ratings,
       feedback: text,
-      Name:JSON.parse(token).user.user_metadata.full_name,
-      Email:JSON.parse(token).user.email,
-      PhoneNumber:JSON.parse(token).user.user_metadata.mobile
-      
+      name: JSON.parse(token).user.user_metadata.full_name,
+      email: JSON.parse(token).user.email,
+      mobile: JSON.parse(token).user.user_metadata.mobile,
     };
-    console.log(Insertdata)
+
     try {
       // Replace 'your_table' with the name of your table
-      const { res, error } = await supabase.from("Feedbacks").insert([Insertdata]);
+      const { res, error } = await supabase
+        .from("Feedbacks")
+        .insert([Insertdata]);
 
       if (error) {
         throw error;
       }
 
-      console.log("Data inserted:", res);
+      console.log("Data inserted");
     } catch (error) {
       console.error("Error inserting data:", error.message);
     }
@@ -109,10 +117,10 @@ const Feedback = () => {
     //console.log(ratings[0])
   }
 
-  function handleClick(e){
-    console.log(e.target.value)
-    setDep(e.target.value)
-  }
+  // function handleClick(e) {
+  //   console.log(e.target.value);
+  //   setDep(e.target.value);
+  // }
   return (
     <div className="flex items-stretch bg-[#158EB4] min-h-screen">
       <div className="flex flex-col items-center">
@@ -121,21 +129,21 @@ const Feedback = () => {
             Feedback
           </p>
         </div>
-        <div className="mt-4 p-4 w-72">
+        {/* <div className="mt-4 p-4 w-72">
           <select
-              onChange={handleClick}
-              className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600"
+            onChange={handleClick}
+            className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600"
           >
-            {department.map((dept, i)=>
-                <option value={dept} key={i}>
-                    {dept}
-                </option>
-            )}
+            {department.map((dept, i) => (
+              <option value={dept} key={i}>
+                {dept}
+              </option>
+            ))}
           </select>
-        </div>
+        </div> */}
         <div className="mb-16">
           <p className="text-center p-0 h-8 text-3xl font-extrabold text-white">
-            {dep}
+            {department.name}
           </p>
         </div>
         <form
