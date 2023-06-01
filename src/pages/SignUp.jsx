@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../client";
 
@@ -15,7 +15,7 @@ const SignUp = ({ setToken }) => {
     mobile: "",
   });
 
-  console.log(formData);
+  // console.log(formData);
 
   function handleChange(event) {
     setFormData((prevFormData) => {
@@ -40,8 +40,20 @@ const SignUp = ({ setToken }) => {
           },
         },
       });
+
       if (error) throw error;
       else {
+        const { res, profileError } = await supabase.from("Profiles").insert([
+          {
+            name: formData.fullName,
+            email: formData.email,
+            mobile: formData.mobile,
+            user_id: data.user.id,
+          },
+        ]);
+
+        if (profileError) throw profileError;
+
         setToken(data);
         navigate("/routemap");
       }
@@ -50,12 +62,29 @@ const SignUp = ({ setToken }) => {
     }
   }
 
+  const handleProfile = async (e) => {
+    e.preventDefault();
+    const { res, profileError } = await supabase.from("Profiles").insert([
+      {
+        name: formData.fullName,
+        email: formData.email,
+        mobile: formData.mobile,
+        user_id: "",
+      },
+    ]);
+
+    console.log(profileError);
+  };
+
   return (
     <div className="login-main">
       <img src={AuthIcon} alt="authIcon" className="authIcon" />
       <div className="info">
         <h3>OPEN DAY'23</h3>
-        <p>At Your Fingertips: Explore JSSSTU's Open Day Event, Departments and Revolutionary Projects with our User-Friendly Open Day Website! </p>
+        <p>
+          At Your Fingertips: Explore JSSSTU's Open Day Event, Departments and
+          Revolutionary Projects with our User-Friendly Open Day Website!{" "}
+        </p>
       </div>
       <form onSubmit={handleSubmit}>
         <input placeholder="Fullname" name="fullName" onChange={handleChange} />
