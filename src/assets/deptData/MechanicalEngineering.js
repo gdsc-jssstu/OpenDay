@@ -1,4 +1,5 @@
 const MechDeptData = {
+  id: 2,
   bannerImg: "../img/dept/me/mech.jpg",
   name: "Department of Mechanical Engineering",
   aboutUs: {

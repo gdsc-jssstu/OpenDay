@@ -33,7 +33,7 @@ const App = () => {
         <Route path={"/dept/:name"} element={<DeptDetails />} />
         <Route path={"/routemap"} element={<RouteMap />} />
         <Route path={"/homepage"} element={<Homepage token={token} />} />
-        <Route path={"/feedback"} element={<Feedback token={token} />} />
+        <Route path={"/feedback/:name"} element={<Feedback token={token} />} />
         <Route path={"/luckydraw"} element={<LuckyDraw />} />
       </Routes>
     </div>

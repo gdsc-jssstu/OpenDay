@@ -1,4 +1,5 @@
 const CseDeptData = {
+  id: 1,
   bannerImg: "../img/dept/me/cse.jpg",
   name: "Department of Computer Science and Engineering",
   aboutUs: {
