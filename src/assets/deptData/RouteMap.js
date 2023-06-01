@@ -91,6 +91,11 @@ export const MapData = [
     details_route: "/dept/eie",
   },
   {
+    name:"Dept of Training and Placement",
+    image:"/img/dept/RouteMap/unived.svg",
+    details_route:"/dept/placement"
+  },
+  {
     name: "Dept of Computer Applications",
     image: "/img/dept/RouteMap/mca.svg",
     details_route: "/dept/ca",
@@ -106,7 +111,7 @@ export const MapData = [
     details_route: "/dept/step",
   },
   {
-    name: "Dept of PT",
+    name: "Dept of Physical Education",
     image: "/img/dept/RouteMap/pt.svg",
     details_route: "/dept/pe",
   },

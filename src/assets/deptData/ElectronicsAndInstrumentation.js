@@ -1,4 +1,5 @@
 const EIDeptData = {
+
   id: 21,
   bannerImg: "../img/dept/me/electronics.jpeg",
   name: "Department of Electronics and Instrumentation Engineering",
@@ -27,3 +28,4 @@ const EIDeptData = {
 };
 
 export default EIDeptData;
+

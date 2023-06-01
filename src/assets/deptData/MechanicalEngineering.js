@@ -22,6 +22,8 @@ const MechDeptData = {
       "Autonomous Drone with Integrated System for Public Safety - Dr. Mahesh V.M",
     ],
   },
+  nextVenue:"/dept/phy",
+  prevVenue:"/dept/ece",
 };
 
 export default MechDeptData;

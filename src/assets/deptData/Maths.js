@@ -1,4 +1,5 @@
 const MathsDeptData = {
+
   id: 7,
   bannerImg: "../img/dept/me/maths.jpg",
   name: "Department of Mathematics",
@@ -24,3 +25,4 @@ const MathsDeptData = {
 };
 
 export default MathsDeptData;
+

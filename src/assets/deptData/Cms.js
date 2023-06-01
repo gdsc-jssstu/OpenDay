@@ -13,6 +13,7 @@ const ManagementDeptData = {
       "JSSCMS is continuing its track record of long years of success and promises maintaining the winning streak. JSSCMS in its 24th year in progress with 2000 plus students being conferred with MBA degrees have established their career in successful companies.",
       "Faculty empowered with domain-specific training programs resulting in good number of publications.",
     ],
+
   },
   projects: {
     imagesPath: ["../img/dept/me/mba.jpg", "../img/dept/me/mba.jpg"],
@@ -23,3 +24,5 @@ const ManagementDeptData = {
 };
 
 export default ManagementDeptData;
+
+

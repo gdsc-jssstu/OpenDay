@@ -1,4 +1,5 @@
 const CSBSDeptData = {
+
   id: 16,
   bannerImg: "../img/dept/me/CSBS.jpg",
   name: "Computer Science & Business Systems(CSBS)",
@@ -25,3 +26,4 @@ const CSBSDeptData = {
 };
 
 export default CSBSDeptData;
+

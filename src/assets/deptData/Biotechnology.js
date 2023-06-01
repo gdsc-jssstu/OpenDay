@@ -1,4 +1,5 @@
 const BTDeptData = {
+
   id: 8,
   bannerImg: "../img/dept/me/bt.jpeg",
   name: "Department of Biotechnology",

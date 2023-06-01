@@ -1,4 +1,5 @@
 const EEEDeptData = {
+
   id: 4,
   bannerImg: "../img/dept/me/electrical.jpg",
   name: "Department of Electronics and Electronics Engineering",
@@ -28,3 +29,4 @@ const EEEDeptData = {
 };
 
 export default EEEDeptData;
+
