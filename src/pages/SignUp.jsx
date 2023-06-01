@@ -103,7 +103,7 @@ const SignUp = ({ setToken }) => {
         <button type="submit">Sign Up</button>
       </form>
       <p className="sign-up-link">
-        Already have an account!<Link to="/">Sign In</Link>
+        Already have an account! <Link to="/">Sign In</Link>
       </p>
     </div>
   );

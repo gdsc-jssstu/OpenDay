@@ -24,6 +24,8 @@ const PSTDeptData = {
       "Chandresh M. P., & Roopa S. “Energy efficient toughening of brittle bioplastic PLA for fracture safety enhancement through novel approach of TPV development using liquid isoprene rubber”. (2022). Indian Patent application no. 202241043001",
     ],
   },
+  nextVenue:"/dept/cse",
+  prevVenue:"/dept/ipe",
 };
 
 export default PSTDeptData;

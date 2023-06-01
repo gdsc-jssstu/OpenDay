@@ -23,6 +23,8 @@ const PhyDeptData = {
       "‘Investigation on opto-electric and microcrystalline behaviors of polyvinyl alcohol / lithium zirconate nanocomposite films’, National Conference on Nanoscience and Technology for Energy, Health and Environment, held at Institute of Engineers, Mysuru, 19th – 20th October 2013.",
     ],
   },
+  nextVenue:"/dept/che",
+  prevVenue:"/dept/me",
 };
 
 export default PhyDeptData;
