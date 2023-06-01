@@ -50,11 +50,10 @@ const DeptDetails = () => {
         {/* TODO: What does this from do? */}
         <form className="flex flex-col  py-6 items-center text-lg font-semibold ">
           <div className="flex justify-around items-center  py-6 tems-center text-lg font-semibold  w-96">
-          <button className="m-4 p-4 rounded-2xl shadow-2xl bg-secondary w-min text-lg font-semibold">
-            <Link to='/feedback'>Feedback</Link>
-          </button>
+            <button className="m-4 p-4 rounded-2xl shadow-2xl bg-secondary w-min text-lg font-semibold">
+              <Link to={`/feedback/${name}`}>Feedback</Link>
+            </button>
           </div>
-          
         </form>
       </div>
 
