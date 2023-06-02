@@ -1,10 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { supabase } from "../client";
+import Confetti from "react-confetti";
 
 const LuckyDraw = () => {
   const [list, setList] = useState(null);
   const [loading, setLoading] = useState(false);
   const [feedbackList, setFeedbackList] = useState(null);
+  const [randomIndexs, setRandomIndexs] = useState([]);
+  const [height, setHeight] = useState(null);
+  const [width, setWidth] = useState(null);
+  const confetiRef = useRef(null);
+  const [confettieState, setConfettieState] = useState(false);
 
   const getFeedbacks = async () => {
     try {
@@ -31,48 +37,52 @@ const LuckyDraw = () => {
   };
 
   useEffect(() => {
+    setHeight(window.innerHeight);
+    setWidth(window.innerWidth);
     getFeedbacks();
   }, []);
 
   const generateLuckyWinners = () => {
+    setHeight(window.innerHeight);
+    setWidth(window.innerWidth);
+
     setLoading(true);
-
-    // Generate n unique numbers
-
-    var randomIndexes = [];
+    setConfettieState(true);
     var i = 0;
-
-    if (feedbackList) {
-      while (i < 5) {
-        var r = Math.floor(Math.random() * feedbackList.length);
-        if (randomIndexes.indexOf(r) === -1) {
-          randomIndexes.push(r);
-          i++;
+    if (randomIndexs.length < feedbackList.length) {
+      if (feedbackList) {
+        while (i < 5) {
+          var r = Math.floor(Math.random() * feedbackList.length);
+          console.log(randomIndexs);
+          if (randomIndexs.indexOf(r) === -1) {
+            setRandomIndexs([...randomIndexs, r]);
+            // tempSelectedUsers.push(feedbackList[r]);
+            if (!list) setList([feedbackList[r]]);
+            else setList([...list, feedbackList[r]]);
+            i++;
+            break;
+          }
         }
+
+        console.log(feedbackList);
+      } else {
+        getFeedbacks();
       }
-
-      console.log(feedbackList);
-
-      // select users with index from randomIndexes
-      var tempSelectedUsers = [];
-      randomIndexes.forEach((randomIndex) => {
-        tempSelectedUsers.push(feedbackList[randomIndex]);
-      });
-      setList(tempSelectedUsers);
-      console.log(randomIndexes);
-    } else {
-      getFeedbacks();
     }
     setLoading(false);
   };
 
   return (
-    <div className="min-w-full min-h-screen pb-40 flex items-center justify-center  bg-yellow-200/60">
+    <div className="min-w-full min-h-screen py-10  flex  justify-center  bg-yellow-200/60">
+      {confettieState && (
+        <Confetti numberOfPieces={100} width={width} height={height} />
+      )}
       <div className="flex flex-col items-center gap-y-12">
         <h4 className=" font-bold text-4xl">
           {loading ? "Loading" : "Lucky Draw"}
         </h4>
-        {!list && (
+
+        {!loading && randomIndexs.length < 5 && (
           <button
             onClick={generateLuckyWinners}
             className="transition-all flex items-center bg-blue-600 rounded-sm drop-shadow-md text-lg p-4 text-zinc-50"
@@ -82,11 +92,13 @@ const LuckyDraw = () => {
         )}
         {list && <h4 className="text-5xl transition-all">CONGRATULATIONS!</h4>}
         {list && (
-          <ol className="flex flex-wrap justify-center gap-12 transition-all px-4">
+          <ol className="flex flex-col items-center flex-wrap justify-center gap-y-5 transition-all px-4">
             {list.map((item) => (
               <li className="py-1  ">
-                <p className="text-3xl font-semibold">{item.name}</p>
-                <p className="text-lg">Ph: {item.mobile}</p>
+                <p className="text-3xl font-semibold text-center">
+                  {item.name}
+                </p>
+                <p className="text-lg text-center">Ph: {item.mobile}</p>
               </li>
             ))}
           </ol>
