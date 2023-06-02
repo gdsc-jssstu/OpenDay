@@ -54,9 +54,9 @@ const Feedback = () => {
   // }, []);
 
   const questions = [
-    "On a scale of 1 to 5, how convinced are you with the explaination from the speakers?",
-    "On a scale of 1 to 5, how well does the department address and resolve issues or concerns?",
-    "On a scale of 1 to 5, how would you rate your overall experience at the stall?",
+    "On a scale of 1 to 5, how convinced are you with the presentation and information delivered by the department?",
+    "On a scale of 1 to 5, how well does the significance of projects, models and demo works?",
+    "On a scale of 1 to 5, how would you rate your overall experience at the department?",
   ];
   const radioOptions = [1, 2, 3, 4, 5];
 
