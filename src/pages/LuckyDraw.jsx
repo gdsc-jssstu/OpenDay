@@ -91,7 +91,7 @@ const LuckyDraw = () => {
           </button>
         )}
         {list && (
-          <h4 className="transition-all text-2xl  lg:text-5xl">
+          <h4 className="transition-all text-2xl  md:text-5xl">
             CONGRATULATIONS!
           </h4>
         )}
