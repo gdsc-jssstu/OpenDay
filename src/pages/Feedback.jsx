@@ -128,6 +128,7 @@ const Feedback = () => {
         <p className="text-center text-4xl font-extrabold text-white">
           Feedback
         </p>
+
         <p className="text-center tracking-wide px-2 text-2xl font-extrabold text-white">
           {department.name}
         </p>
