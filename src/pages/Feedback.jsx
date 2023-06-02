@@ -125,10 +125,10 @@ const Feedback = () => {
   return (
     <div className="flex justify-center bg-[#158EB4] min-h-screen py-6">
       <div className="flex flex-col items-center gap-y-10">
-        <p className="text-center text-5xl font-extrabold text-white">
+        <p className="text-center text-4xl font-extrabold text-white">
           Feedback
         </p>
-        <p className="text-center px-2 text-3xl font-extrabold text-white">
+        <p className="text-center tracking-wide px-2 text-2xl font-extrabold text-white">
           {department.name}
         </p>
 
@@ -138,7 +138,7 @@ const Feedback = () => {
         >
           {questions.map((question, i) => (
             <div className="w-full max-w-md" key={i}>
-              <p className="text-justify text-lg mb-2">{question}</p>
+              <p className=" text-justify text-lg mb-2">{question}</p>
               <div className="flex justify-between ">
                 {radioOptions.map((option) => (
                   <div className="flex items-center gap-x-2  " key={option}>

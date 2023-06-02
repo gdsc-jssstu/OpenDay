@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 const DeptSection = ({ heading, content, isList = false, images }) => {
   return (
     <article className="tracking-wide">
-      <h4 className="my-4 text-white text-2xl font-semibold ">{heading}</h4>
+      <h4 className="mb-4 text-white text-2xl font-semibold ">{heading}</h4>
 
       {images && (
         <div className="flex justify-center">

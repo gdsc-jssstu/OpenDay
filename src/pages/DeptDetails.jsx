@@ -32,8 +32,12 @@ const DeptDetails = () => {
 
   return (
     <div>
-      <BannerImage img={data.bannerImg} title={data.name} />
+      <BannerImage img={data.bannerImg} />
+
       <div className="p-4 bg-primary flex flex-col gap-y-5 ">
+        <h4 className="text-center text-white text-2xl font-semibold">
+          {data.name}
+        </h4>
         <DeptSection heading="About Us" content={data.aboutUs.content} />
         <DeptSection
           heading="Department Highlights"
@@ -51,7 +55,6 @@ const DeptDetails = () => {
           />
         )}
 
-
         {/* TODO: What does this from do? */}
         <form className="flex flex-col  py-6 items-center text-lg font-semibold ">
           <div className="flex justify-around items-center  py-6 tems-center text-lg font-semibold  w-96">
@@ -63,11 +66,20 @@ const DeptDetails = () => {
       </div>
 
       {/* TODO: Get next dept link from current dept data */}
-      <div className="flex divide-x-2 divide-primary/30 bg-primary/50">
-      <a href={data.prevVenue} className="flex-1 py-6 text-center text-lg font-semibold ">
+      <div className=" flex divide-x-2 divide-primary/30 bg-primary/50">
+        <a
+          href={data.prevVenue}
+          className="flex-1 py-6 px-1 text-center  font-semibold "
+        >
           Previous Venue
         </a>
-        <a href={data.nextVenue} className="flex-1 py-6 text-center text-lg font-semibold ">
+        <a href="/routemap" className=" py-6 px-3 text-center  font-semibold ">
+          Route Map
+        </a>
+        <a
+          href={data.nextVenue}
+          className="flex-1 py-6 px-1 text-center  font-semibold "
+        >
           Next Venue
         </a>
       </div>
