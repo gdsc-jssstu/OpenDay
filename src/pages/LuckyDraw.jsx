@@ -16,14 +16,14 @@ const LuckyDraw = () => {
     try {
       setLoading(true);
       const { data, error } = await supabase
-        .from("Feedbacks")
-        .select(`name, email, mobile, userid`);
+        .from("Profiles")
+        .select(`name, email, mobile, user_id`);
 
       if (error) throw error;
       console.log(data);
 
       var filteredlist = data.filter(
-        (v, i, a) => a.findIndex((t) => t.userid === v.userid) === i
+        (v, i, a) => a.findIndex((t) => t.user_id === v.user_id) === i
       );
 
       console.log("Filtered List", filteredlist);
